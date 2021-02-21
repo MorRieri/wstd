@@ -1,0 +1,24 @@
+.slider-type
+  padding: 32px
+  background: $gradient1
+  overflow: hidden
+
+  &__slider
+    overflow: visible
+
+  &__nav
+    position: absolute
+    top: calc(50% - 24px)
+    color: $pure-white
+    cursor: pointer
+    z-index: 1
+
+    .icon
+      width: 48px
+      height: 48px
+
+    &--prev
+      left: -24px
+    &--next
+      right: 24px
+      transform: rotate(180deg)

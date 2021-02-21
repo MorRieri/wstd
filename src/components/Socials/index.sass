@@ -1,0 +1,30 @@
+.socials
+  display: flex
+  align-items: center
+
+  &__item
+    cursor: pointer
+    &:not(.socials__item--download)
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 44px
+      height: 44px
+      margin-right: 8px
+      border-radius: 50%
+      border: 1px solid $border-grey
+
+      &:last-child
+        margin-right: 0
+
+    .icon
+      width: 20px
+      height: 20px
+
+    &--download
+      max-height: 44px
+      padding: 18px
+      margin-right: 8px
+
+      .button__text
+        margin-right: 18px

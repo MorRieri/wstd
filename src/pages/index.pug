@@ -1,0 +1,29 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Главная"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+  section.section.section--screen-main
+    .container
+      +ScreenMain
+  section.section.section--type-slider
+    .container
+      .slider-type-container
+        +CardType
+        +SliderType
+  section.section
+    .container
+      +AboutCompany
+  section.section.section--default
+    .container
+      +Products
+  section.section.section--clients
+    .container
+      +Clients
+  section.section.section--default
+    .container
+      +Form
+

@@ -1,0 +1,28 @@
+.header-types
+  display: flex
+  align-items: center
+
+  &__name
+    position: relative
+    padding-right: 68px
+    white-space: nowrap
+
+    @include pseudo-before
+      position: absolute
+      top: 50%
+      right: 18px
+      display: block
+      width: 32px
+      height: 1px
+      background-color: $text_black
+
+
+  &__nav
+    display: flex
+    align-items: center
+
+  &__nav-item
+    margin-right: 18px
+    padding: 8px 18px
+    &:last-child
+      margin-right: 0

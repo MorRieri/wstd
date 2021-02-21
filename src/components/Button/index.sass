@@ -1,0 +1,53 @@
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 8px 24px
+  @include font(14, 24)
+  font-weight: 500
+  border-radius: 100px
+  cursor: pointer
+
+  .icon + .button__text
+    margin-left: 16px
+
+  &__text
+    white-space: nowrap
+
+    + .icon
+      margin-left: 16px
+
+  &--black
+    color: $pure-white
+    background-color: $text_black
+
+  &--gradient-1
+    background: $gradient1
+
+  &--gradient-2
+    background: $gradient2
+
+  &--gradient-3
+    background: $gradient3
+
+  &--outline
+    border: 1px solid $border-grey-2
+
+  &--more
+    padding: 12px 0
+
+  &--review
+    @include font(16, 20)
+    font-weight: 400
+    padding: 0
+    .button__text
+      position: relative
+      opacity: 0.5
+      padding: 0 0 4px
+      border-bottom: 1px dashed rgba($text_black, 0.5)
+
+  &--collapse
+    @include font(16, 20)
+    font-weight: 500
+    background: $pure-white
+

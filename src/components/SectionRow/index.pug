@@ -1,0 +1,36 @@
+mixin SectionRowTop
+  .section-row.section-row--top.section-row--border-bottom&attributes(attributes)
+    .section-row__inner.container
+      a.not-link.section-row__logo(href="/") webster std
+      nav.section-row__nav
+        a.section-row__nav-item Портфолио
+        a.section-row__nav-item Студия
+        a.section-row__nav-item Журнал
+        a.section-row__nav-item Контакты
+      a.section-row__contact
+        span +7 499 964-04-84
+        <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="100%" rx="50%" fill="currentColor"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0622 13H12C12.5523 13 13 12.5523 13 12V10C13 8.89543 12.1046 8 11 8H9C8.44772 8 8 8.44772 8 9C8 14.7683 13.2317 20 19 20C19.5523 20 20 19.5523 20 19V17C20 15.8954 19.1046 15 18 15H16C15.4477 15 15 15.4477 15 16V16.9378C13.4596 16.0974 12.1344 14.8159 11.2361 13.3052L11.0622 13Z" fill="white"/>
+        </svg>
+      a.section-row__contact
+        span info@websterstd.com
+        <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="100%" rx="50%" fill="currentColor"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10.3L20 18C20 18.5128 19.614 18.9355 19.1166 18.9933L19 19H9C8.48716 19 8.06449 18.614 8.00673 18.1166L8 18L7.99999 10.3L13.3415 14.7526C13.7185 15.0825 14.2815 15.0825 14.6585 14.7526L20 10.3ZM18.433 9L14 12.6712L9.56599 9H18.433Z" fill="white"/>
+        </svg>
+      a.not-link.button.button--black.button--rounded.section-row__button-start
+        span.button__text начать проект
+
+mixin SectionRowMiddle
+  .section-row.section-row--middle.section-row--border-bottom&attributes(attributes)
+    .section-row__inner.container
+      +HeaderTypes_sites.section-row__types
+      +HeaderTypes_services.section-row__types
+
+mixin SectionRowBottom
+  .section-row.section-row--bottom&attributes(attributes)
+    .section-row__inner.container
+      p.section-row__copyright © 2021 Webster STD
+      a.section-row__politic Политика конфиденциальности
+      +Socials('true').section-row__socials

@@ -1,0 +1,49 @@
+.form-wrap
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 96px 0
+    background-color: $pure-white
+    border-radius: 20px
+
+.form
+  max-width: 100%
+  width: 760px
+  &__title
+    @include font(64, 78)
+    font-weight: 600
+    margin-bottom: 24px
+
+  &__description
+    @include font(24, 38)
+    margin-bottom: 48px
+
+  &__template
+    display: flex
+    flex-direction: column
+    margin-bottom: 64px
+
+  &__approve
+    @include font(18, 28)
+    margin-bottom: 64px
+    a
+      color: $blue
+
+  &__button-submit
+    width: 100%
+    @include font(26, 40)
+    font-weight: 600
+
+  &__label
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+
+  &__input
+    width: 100%
+    padding:  0 0 16px
+    border: none
+    border-bottom: 1px solid $border-grey
+    @include font(24, 38)
+    outline: none

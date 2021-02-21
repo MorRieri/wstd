@@ -1,0 +1,42 @@
+.about-company
+  position: relative
+  display: flex
+  flex-wrap: wrap
+
+  &__description
+    padding-top: 190px
+    padding-bottom: 190px
+
+  &__image
+    position: absolute
+    top: -403px;
+    left: 50%;
+    z-index: -1;
+
+
+  &__cards
+    width: 100%
+
+  &__box
+    max-width: 100%
+    width: 570px
+
+  &__title
+    @include font(80, 96)
+    font-weight: 600
+    margin-bottom: 32px
+
+  &__text
+    max-width: 100%
+    width: 450px
+    @include font(18, 28)
+    font-weight: 500
+    margin-bottom: 40px
+
+  &__actions
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+  &__button
+    margin-right: 40px

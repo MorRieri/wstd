@@ -1,0 +1,30 @@
+.statement-box
+  display: flex
+  flex-direction: column
+
+  &__description
+    @include font(18, 28)
+    margin-bottom: 24px
+
+  &__author
+    display: flex
+    align-items: center
+
+  &__avatar
+    flex-shrink: 0
+    width: 64px
+    height: 64px
+    margin-right: 24px
+    border-radius: 50%
+    overflow: hidden
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+
+  &__name
+    margin-bottom: 8px
+    font-weight: 600
+
+  &__type
+    @include font(15, 18)

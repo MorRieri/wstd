@@ -1,0 +1,29 @@
+.card-product
+  padding: 56px 0 32px
+  border-bottom: 1px solid $border-grey
+
+  &__title
+    @include font(36, 40)
+    font-weight: 600
+
+  &__box
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+  &__description
+    max-width: 100%
+    width: 420px
+
+  &__image
+    width: 120px
+    height: 105px
+    border-radius: 4px
+    object-fit: cover
+    object-position: center
+    margin-left: 32px
+
+  &__text
+    @include font(18, 28)
+    font-weight: 500
+    margin-bottom: 24px

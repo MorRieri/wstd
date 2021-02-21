@@ -1,0 +1,89 @@
+.section-row
+
+  &__inner
+    display: flex
+    align-items: center
+    padding-top: 24px
+    padding-bottom: 24px
+
+  &__logo
+    margin-right: 56px
+    @include font(24, 28)
+    font-weight: 700
+    letter-spacing: 0.09rem
+    text-transform: uppercase
+    white-space: nowrap
+    cursor: pointer
+
+  &__nav
+    display: flex
+    align-items: center
+    margin-right: auto
+
+  &__nav-item
+    margin-right: 24px
+    @include font(16, 28)
+    font-weight: 500
+    cursor: pointer
+    &:last-child
+      margin-right: 0
+
+  &__contact
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-left: 40px
+    white-space: nowrap
+    cursor: pointer
+    span
+      margin-right: 12px
+    .icon
+      width: 28px
+      height: 28px
+
+  &__button-start
+    margin-left: 40px
+
+  &__types
+    position: relative
+    padding: 0 32px
+
+    @include pseudo-after
+      position: absolute
+      top: -20px
+      right: 0
+      display: inline-block
+      width: 1px
+      height: 84px
+      background-color: $border-grey
+
+    &:first-child
+      padding-left: 0
+
+    &:last-child
+      @include pseudo-after
+        display: none
+
+  &__copyright
+    @include font(14, 20)
+    font-weight: 500
+
+  &__socials
+    margin-left: auto
+
+  &__politic
+    margin-left: 48px
+    @include font(14, 20)
+    font-weight: 500
+
+  &--border-bottom
+    border-bottom: 1px solid $border-grey
+  &--top
+    .section-row__inner
+      max-height: 78px
+  &--middle
+    .section-row__inner
+      max-height: 84px
+  &--bottom
+    .section-row__inner
+      max-height: 92px

@@ -1,0 +1,14 @@
+mixin Form
+  .form-wrap.wrapper.wrapper--padding
+    .form-wrap__inner
+      form.form
+        p.form__title Давайте сотрудничать
+        p.form__description Свяжемся с вами в ближайшее время, чтобы обсудить все подробности проекта
+        .form__template
+          label.form__label
+            input.form__input(type='text' placeholder='Имя')
+          label.form__label
+            input.form__input(type='text' placeholder='Телефон')
+        .form__approve Нажимая кнопку, вы даёте согласие на <a href="#">обработку персональных данных</a>
+        button.button.button--black.form__button-submit
+          span.button__text Начать проект

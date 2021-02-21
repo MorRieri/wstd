@@ -1,0 +1,48 @@
+.card-type
+  flex-shrink: 0
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 420px
+  height: 590px
+  padding: 112px 48px 32px
+  border-radius: 20px
+  background-color: $pure-white
+
+  &__circle
+    position: absolute
+    top: -64px
+    left: calc(50% - 64px)
+    width: 128px
+    height: 128px
+    background-color: $pure-white
+    border: 10px solid $background
+    border-radius: 50%
+    overflow: hidden
+
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 70%
+      height: 70%
+      transform: translate(-50%, -50%)
+
+  &__pre
+    @include font(18, 22)
+    font-weight: 500
+    opacity: 0.25
+    margin-bottom: 16px
+
+  &__title
+    @include font(32, 40)
+    font-weight: 600
+    margin-bottom: 32px
+
+  &__description
+    @include font(18, 28)
+
+  &__button
+    @include font(16, 20)
+    margin-top: auto
