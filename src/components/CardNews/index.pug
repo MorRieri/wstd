@@ -1,0 +1,16 @@
+mixin CardNews
+  .card-news&attributes(attributes)
+    img.card-news__image(src="./assets/img/card-news-test.png")
+    .card-news__description.card-news-layout
+      .card-news__column
+        p.card-news__title Новая парадигма реальности: объем доходов населения сократился
+        date.card-news__date 5 ноября, 2021
+      .card-news__column
+        .card-news__box
+          p.card-news__text Учитывая ключевые сценарии поведения, разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо форм воздействия. Но представители современных социальных резервов, превозмогая сложившуюся непростую экономическую ситуацию, ограничены исключительно образом мышления.
+          a.card-news__button.button.button--more(href="/article.html")
+            span.button__text Читать
+            <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100%" height="100%" rx="50%" fill="currentColor"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2933 18.2933C10.9023 18.6842 10.9023 19.3162 11.2933 19.7072C11.6843 20.0982 12.3163 20.0982 12.7073 19.7072L17.7073 14.7073C18.0983 14.3163 18.0983 13.6842 17.7073 13.2933L12.7073 8.29325C12.3163 7.90225 11.6843 7.90225 11.2933 8.29325C10.9023 8.68425 10.9023 9.31625 11.2933 9.70725L15.5863 14.0002L11.2933 18.2933Z" fill="white"/>
+            </svg>

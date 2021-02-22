@@ -1,0 +1,33 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Журнал"
+  - var pageClass = ''
+  - var activePage = 'journal'
+
+block content
+  section.section.section--service-page
+    .container
+      .services-page
+        .wrapper.wrapper--padding
+          .services-page__title Журнал
+        .filters.services-page__filters.js-filters
+          .filters__nav.wrapper.wrapper--padding
+            button.button.button--outline.filters__tab.js-filters-tab(data-filter="all")
+              span.button__text Все
+            button.button.button--outline.filters__tab.js-filters-tab(data-filter="support")
+              span.button__text Поддержка
+            button.button.button--outline.filters__tab.js-filters-tab(data-filter="seo")
+              span.button__text SEO
+            button.button.button--outline.filters__tab.js-filters-tab(data-filter="promotion")
+              span.button__text Продвижение
+          .filters__container.wrapper
+            ul.products-list
+              li.products-list__item.js-filters-element(data-filter="support")
+                +CardNews
+              li.products-list__item.js-filters-element(data-filter="seo")
+                +CardNews
+              li.products-list__item.js-filters-element(data-filter="promotion")
+                +CardNews
+
+

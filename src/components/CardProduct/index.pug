@@ -1,5 +1,5 @@
 mixin CardProduct
-  .card-product.card-product-layout
+  .card-product.card-product-layout&attributes(attributes)
     .card-product__column
       p.card-product__title Mriya Resort & Spa
     .card-product__column
@@ -15,7 +15,7 @@ mixin CardProduct
         img.card-product__image(src="./assets/img/card-product-test.jpg")
 
 mixin CardProductMain
-  .card-product.card-product-layout
+  .card-product.card-product-layout&attributes(attributes)
     .card-product__column
       +CardProductCategory
     .card-product__column

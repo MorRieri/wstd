@@ -1,3 +1,4 @@
 //=./Header/index.js
 //=./SliderType/index.js
-//=./Products/index.js
+//=./ProductsList/index.js
+//=./Filters/index.js

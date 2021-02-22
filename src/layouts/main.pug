@@ -30,7 +30,8 @@ html(lang="ru-RU")
       +Header
       main
         block content
-      +Footer
+      if activePage !== 'contacts'
+        +Footer
     script(src="assets/js/libs.min.js")
     script(src="assets/js/main.js")
     block script

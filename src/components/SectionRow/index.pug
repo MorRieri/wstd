@@ -3,10 +3,10 @@ mixin SectionRowTop
     .section-row__inner.container
       a.not-link.section-row__logo(href="/") webster std
       nav.section-row__nav
-        a.section-row__nav-item Портфолио
-        a.section-row__nav-item Студия
-        a.section-row__nav-item Журнал
-        a.section-row__nav-item Контакты
+        a.section-row__nav-item(href='/portfolio.html') Портфолио
+        a.section-row__nav-item(href='/about.html') Студия
+        a.section-row__nav-item(href='/journal.html') Журнал
+        a.section-row__nav-item(href='/contacts.html') Контакты
       a.section-row__contact
         span +7 499 964-04-84
         <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,9 +28,10 @@ mixin SectionRowMiddle
       +HeaderTypes_sites.section-row__types
       +HeaderTypes_services.section-row__types
 
-mixin SectionRowBottom
+mixin SectionRowBottom(notPolitic)
   .section-row.section-row--bottom&attributes(attributes)
     .section-row__inner.container
       p.section-row__copyright © 2021 Webster STD
-      a.section-row__politic Политика конфиденциальности
+      if !notPolitic
+        a.section-row__politic Политика конфиденциальности
       +Socials('true').section-row__socials

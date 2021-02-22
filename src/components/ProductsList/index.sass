@@ -1,0 +1,37 @@
+.products-list
+  list-style: none
+
+  &__sublist
+    background-color: $pure-white
+    margin-top: -1px
+    border-radius: 20px
+
+    &.hide-collapse
+      .products-list
+        max-height: 0
+        overflow: hidden
+      .card-product
+        border-color: transparent
+
+
+  &__item
+    padding: 0 48px
+
+    &:last-child
+      .card-product
+        border-color: transparent
+
+    &--main
+      position: relative
+      .card-product
+        padding-bottom: 56px
+
+  &__button-collapse
+    position: absolute
+    bottom: 0
+    right: 48px
+    transform: translateY(50%)
+
+    .icon
+      width: 20px
+      height: 20px

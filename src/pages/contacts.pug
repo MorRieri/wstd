@@ -1,0 +1,19 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Контакты"
+  - var pageClass = ''
+  - var activePage = 'contacts'
+
+block content
+  section.section.section--contacts
+    .container
+      .contacts
+        .contacts__description
+          .contacts__box
+            a.contacts__title(href="#") +7 499 964-04-84
+            a.contacts__title(href="#") info@websterstd.com
+            a.contacts__title(href="#") Начать проект
+          +CardNotificationGuest
+          +SectionRowBottom(true).contacts__footer
+        .contacts__map

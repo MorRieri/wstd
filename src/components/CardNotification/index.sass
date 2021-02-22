@@ -1,0 +1,30 @@
+.card-notification
+  width: 571px
+  height: 268px
+  border-radius: 20px
+  background-color: $pure-white
+  background-image: url('../img/peace-test.png')
+  background-repeat: no-repeat
+  background-position: center right
+  background-size: contain
+
+  &--blue
+    background-color: $blue
+    color: $pure_white
+
+  &__box
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding: 40px
+  &__title
+    @include font(24, 38)
+    font-weight: 600
+    margin-bottom: 10px
+  &__text
+    max-width: 100%
+    width: 300px
+    @include font(24, 32)
+    margin-bottom: 40px
+  &__button
+    margin-top: auto

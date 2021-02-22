@@ -14,6 +14,7 @@ button
   background: transparent
   color: inherit
   font: inherit
+  cursor: pointer
 
 a
   color: inherit
@@ -21,7 +22,6 @@ a
   cursor: pointer
   &:not(.not-link)
     transition: color $transition-time
-    cursor: default
     @include hover
       color: red
 
@@ -63,7 +63,23 @@ body
     margin-right: -72px
 
 
-.card-product-layout
+.card-product-layout,
+.card-news-layout
   display: grid
   grid-gap: 100px
   grid-template-columns: 1fr 1fr
+
+.services-page
+  &__title
+    @include font(80, 96)
+    font-weight: 600
+    margin-bottom: 56px
+
+.card-advantage
+  &__title
+    @include font(24, 38)
+    font-weight: 600
+    margin-bottom: 16px
+
+  &__description
+    @include font(18, 30)

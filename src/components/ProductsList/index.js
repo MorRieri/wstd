@@ -7,6 +7,6 @@ collapseButton.forEach(item => {
 
   item.addEventListener('click', (e) => {
     e.preventDefault()
-    parentCollapseButton.classList.toggle('hide')
+    parentCollapseButton.classList.toggle('hide-collapse')
   }, false)
 })
