@@ -1,0 +1,74 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Для медицины"
+  - var pageClass = ''
+  - var activePage = 'for-medicine'
+
+block content
+  section.section.section--service-page
+    .container
+      .wrapper.wrapper--padding
+        +ScreenServicesMedicine
+  section.section.section--default
+    .container
+      .slider-type-container
+        +CardType
+        +SliderType
+  section.section.section--default
+    .container
+      .excellence.wrapper.wrapper--padding
+        .excellence__list
+          +ExcellenceListMedicine
+        img.excellence__image(src="./assets/img/excellent-test.png")
+  section.section.section--default
+    .container
+      +CardServicesContainer
+  section.section.section--default
+    .container
+      +TrustMedicine.wrapper.wrapper--padding
+  section.section.section--default.section--prices-1
+    .container
+      .wrapper.wrapper--padding
+        .tabs.js-tabs
+          p.tabs__title Пакеты цен
+          .tabs__nav
+            button.button.button--tab.tabs__tab.js-tabs-tab
+              span.button__text Реклама
+            button.button.button--tab.tabs__tab.js-tabs-tab
+              span.button__text Поддержка
+          .tabs__panels
+            .tabs__panel.js-tabs-panel
+              .card-price-layout
+                +CardPriceMin
+                +CardPriceOptima
+                +CardPriceMax
+            .tabs__panel.js-tabs-panel
+              .card-price-layout
+                +CardPriceMin
+                +CardPriceOptima
+        .section.section--default
+          +Cooperation
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Faq
+
+  section.section.section--default
+    .container
+      .card-more-layout
+        +CardMore
+        +CardMore
+        +CardMore
+        +CardMore
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +VideoContent
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Form

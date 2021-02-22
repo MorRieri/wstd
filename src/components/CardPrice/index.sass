@@ -1,0 +1,54 @@
+.card-price
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 48px 32px
+  background-color: $pure_white
+  border-radius: 20px
+
+  &__box
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
+    padding: 16px 32px
+    margin-bottom: 40px
+    box-shadow: $box-shadow-box
+    border-radius: 20px
+
+    &--gradient-1
+      background: $gradient1
+    &--gradient-2
+      background: $gradient2
+    &--gradient-3
+      background: $gradient3
+
+  &__title
+    @include font(36, 40)
+    font-weight: 500
+    margin-bottom: 8px
+
+  &__price
+    @include font(26, 40)
+    font-weight: 500
+
+  &__list
+    width: 100%
+    list-style: none
+    margin-bottom: 40px
+
+  &__list-item
+    @include font(16, 28)
+    font-weight: 500
+    margin-bottom: 24px
+
+    &:last-child
+      margin-bottom: 0
+
+    &--disabled
+      opacity: 0.15
+
+  &__button
+    @include font(18, 24)
+    font-weight: 500
+    padding: 14px 28px

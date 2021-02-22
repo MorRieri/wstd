@@ -1,0 +1,19 @@
+.tabs
+  &__title
+    @include font(64, 78)
+    font-weight: 600
+    margin-bottom: 40px
+
+  &__nav
+    display: flex
+    align-items: center
+    margin-bottom: 48px
+
+  &__tab
+    margin-right: 16px
+
+  &__panel
+    &.hide-tabs-panel
+      visibility: hidden
+      overflow: hidden
+      max-height: 0

@@ -6,6 +6,7 @@
   @include font(14, 24)
   font-weight: 500
   border-radius: 100px
+  outline: none
 
   .icon + .button__text
     margin-left: 16px
@@ -51,4 +52,15 @@
     @include font(16, 20)
     font-weight: 500
     background: $pure-white
+
+  &--tab
+    @include font(26, 40)
+    background: transparent
+    border: 1px dashed $text_black
+    opacity: 0.35
+    border-radius: 12px
+    &.active
+      color: $pure-white
+      background-color: $text_black
+      opacity: 1
 

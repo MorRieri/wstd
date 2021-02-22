@@ -1,0 +1,56 @@
+.faq
+  &__title
+    @include font(64, 78)
+    font-weight: 600
+    margin-bottom: 80px
+  &__list
+    list-style: none
+
+  &__item
+    margin-top: 48px
+    padding-bottom: 48px
+    border-bottom: 1px solid $border-grey
+
+    &:first-child
+      margin-top: 0
+
+    &:last-child
+      padding-bottom: 0
+      border-color: transparent
+
+  &__item-head
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    width: 100%
+    text-align: left
+    outline: none
+
+    .icon
+      flex-shrink: 0
+      width: 32px
+      height: 32px
+      margin-top: 2px
+      margin-left: 24px
+
+  &__item-head-content
+    flex-grow: 1
+    @include font(32, 40)
+    font-weight: 500
+
+  &__item-content
+    padding-top: 48px
+    @include font(24, 38)
+
+    *
+      margin-bottom: 24px
+
+    ul
+      padding-left: 32px
+      list-style: disc
+
+    &.hide-faq
+      visibility: hidden
+      overflow: hidden
+      max-height: 0
+      padding: 0

@@ -81,5 +81,31 @@ body
     font-weight: 600
     margin-bottom: 16px
 
+  &__subtitle
+    @include font(18, 30)
+    font-weight: 600
+    margin-bottom: 16px
+
   &__description
     @include font(18, 30)
+
+.excellence
+  display: flex
+  &__list
+    flex-shrink: 0
+    max-width: 100%
+    width: 570px
+    margin-right: 32px
+  &__image
+    flex-shrink: 1
+    width: 100%
+
+.card-price-layout
+  display: grid
+  grid-gap: 32px
+  grid-template-columns: 1fr 1fr 1fr
+
+.card-more-layout
+  display: grid
+  grid-gap: 32px
+  grid-template-columns: 1fr 1fr 1fr 1fr
