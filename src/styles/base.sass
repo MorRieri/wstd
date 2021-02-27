@@ -36,12 +36,20 @@ body
   min-height: 100vh
   background-color: $background
 
+.is-article-page
+  .page
+    overflow: visible
+
 .container
   max-width: 100%
   width: 1920px
   margin: 0 auto
   padding-left: 72px
   padding-right: 72px
+
+  &--clear
+    padding-left: 0
+    padding-right: 0
 
 .page
   display: flex
@@ -89,6 +97,10 @@ body
   &__description
     @include font(18, 30)
 
+  &__price
+    @include font(26, 40)
+    font-weight: 500
+
 .excellence
   display: flex
   &__list
@@ -109,3 +121,10 @@ body
   display: grid
   grid-gap: 32px
   grid-template-columns: 1fr 1fr 1fr 1fr
+
+.card-services-layout
+  display: grid
+  grid-gap: 48px
+  grid-template-columns: 1fr
+
+

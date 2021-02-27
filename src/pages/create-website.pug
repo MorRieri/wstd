@@ -1,0 +1,58 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Создание сайтов"
+  - var pageClass = ''
+  - var activePage = 'create-website'
+
+block content
+  section.section.section--service-page
+    .container
+      .wrapper.wrapper--padding
+        +ScreenServicesKey
+  section.section.section--default
+    .container
+      .slider-type-container
+        +CardTypeKey
+        +SliderTypeKey
+  section.section.section--default
+    .container
+      .excellence.wrapper.wrapper--padding
+        .excellence__list
+          +ExcellenceBlockKey
+        img.excellence__image(src="./assets/img/excellent-test-key.png")
+  section.section.section--default.section--prices-key
+    .container
+      .wrapper.wrapper--padding
+        .tabs.tabs--white.js-tabs
+          p.tabs__title Виды, сроки, цены на создание сайтов
+          .tabs__nav
+            button.button.button--tab.tabs__tab.js-tabs-tab
+              span.button__text WordPress
+            button.button.button--tab.tabs__tab.js-tabs-tab
+              span.button__text 1C Битрикс
+          .tabs__panels
+            .tabs__panel.js-tabs-panel
+              .card-price-layout
+                +CardPriceMin
+                +CardPriceOptima
+                +CardPriceMax
+            .tabs__panel.js-tabs-panel
+              .card-price-layout
+                +CardPriceMin
+                +CardPriceOptima
+        .section.section--default
+          +CooperationPrice
+
+
+  section.section.section--default
+    .container
+      .card-services-layout.wrapper.wrapper--padding
+        +CardServicesWhite
+        +CardServicesBlack
+        +CardServicesRed
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Form

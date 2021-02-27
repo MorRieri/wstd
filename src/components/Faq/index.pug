@@ -1,6 +1,7 @@
-mixin Faq
+mixin Faq(isNotTitle)
   .faq
-    p.faq__title Под нашей ответственностью
+    if !isNotTitle
+      p.faq__title Под нашей ответственностью
     ul.faq__list.js-faq(data-faq="accordion")
       li.faq__item
         button.faq__item-head.js-faq-button

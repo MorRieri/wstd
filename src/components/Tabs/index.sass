@@ -1,4 +1,15 @@
 .tabs
+  &--white
+    .tabs__title
+      color: $pure-white
+    .tabs__tab
+      color: $pure-white
+      border-color: $pure-white
+      opacity: 1
+      &.active
+        color: $text_black
+        background-color: $pure-white
+
   &__title
     @include font(64, 78)
     font-weight: 600

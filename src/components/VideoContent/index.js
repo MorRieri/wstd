@@ -1,52 +1,28 @@
-function findVideos() {
-  let videos = document.querySelectorAll('.video-content__video');
+const videos = document.querySelectorAll('.js-video')
 
-  for (let i = 0; i < videos.length; i++) {
-    setupVideo(videos[i]);
-  }
-}
+videos.forEach(video => {
+  const btns = video.querySelectorAll('.js-video-button')
+  const iframe = video.querySelector('.js-video-iframe')
 
-function setupVideo(video) {
-  let link = video.querySelector('.video-content__video-link');
-  let media = video.querySelector('.video-content__video-media');
-  let button = video.querySelector('.video-content__video-button');
-  let id = parseMediaURL(media);
+  if (!iframe) return;
 
-  video.addEventListener('click', () => {
-    let iframe = createIframe(id);
+  btns.forEach(btn => {
+    const attr = btn.getAttribute('data-id')
+    btn.children[0].src=`http://i3.ytimg.com/vi/${attr}/maxresdefault.jpg`
 
-    link.remove();
-    button.remove();
-    video.appendChild(iframe);
-  });
+    btn.addEventListener('click', e => {
+      e.preventDefault()
 
-  link.removeAttribute('href');
-  video.classList.add('video-content__video--enabled');
-}
+      btns.forEach(b => {
+        if (b === btn) {
+          b.classList.add('active')
+          iframe.src = `https://www.youtube.com/embed/${attr}?rel=0&amp;showinfo=0&amp;autoplay=0`;
+        } else {
+          b.classList.remove('active')
+        }
+      })
+    })
+  })
 
-function parseMediaURL(media) {
-  let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-  let url = media.src;
-  let match = url.match(regexp);
-
-  return match[1];
-}
-
-function createIframe(id) {
-  let iframe = document.createElement('iframe');
-
-  iframe.setAttribute('allowfullscreen', '');
-  iframe.setAttribute('allow', 'autoplay');
-  iframe.setAttribute('src', generateURL(id));
-  iframe.classList.add('video__media');
-
-  return iframe;
-}
-
-function generateURL(id) {
-  let query = '?rel=0&showinfo=0&autoplay=1';
-
-  return 'https://www.youtube.com/embed/' + id + query;
-}
-
-findVideos();
+  btns[0].click();
+})

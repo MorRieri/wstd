@@ -1,13 +1,36 @@
-mixin CardType
+mixin CardTypeCommon(title, more, text)
   .card-type
     span.card-type__circle
       img(src="./assets/img/card-type-test.png")
     span.card-type__pre Cайты для
-    p.card-type__title Медицины
-    p.card-type__description Мы знаем, что нужно для продвижения медицинского бизнеса в интернете. Применяем 5-летнюю экспертизу и опыт web-поддержки в медицинском секторе.
-    button.card-type__button.button.button--more
-      span.button__text Подробнее
-      <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    p.card-type__title=title
+    if !text
+      p.card-type__description Мы знаем, что нужно для продвижения медицинского бизнеса в интернете. Применяем 5-летнюю экспертизу и опыт web-поддержки в медицинском секторе.
+    else
+      p.card-type__description=text
+    if more === 'true'
+      button.card-type__button.button.button--more
+        span.button__text Подробнее
+        <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="100%" height="100%" rx="50%" fill="currentColor"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2933 18.2933C10.9023 18.6842 10.9023 19.3162 11.2933 19.7072C11.6843 20.0982 12.3163 20.0982 12.7073 19.7072L17.7073 14.7073C18.0983 14.3163 18.0983 13.6842 17.7073 13.2933L12.7073 8.29325C12.3163 7.90225 11.6843 7.90225 11.2933 8.29325C10.9023 8.68425 10.9023 9.31625 11.2933 9.70725L15.5863 14.0002L11.2933 18.2933Z" fill="white"/>
-      </svg>
+        </svg>
+    else
+      button.card-type__button.card-type__button--project.button.button--outline-black
+        span.button__text Начать проект
+
+
+mixin CardTypeMain
+  +CardTypeCommon('Медицины', true)
+
+mixin CardTypeMedicine
+  +CardTypeCommon('Медицины')
+
+mixin CardTypeRest
+  +CardTypeCommon('Ресторанов')
+
+mixin CardTypeHotel
+  +CardTypeCommon('Отелей')
+
+mixin CardTypeKey
+  +CardTypeCommon('Под ключ', false, 'Создание уникальных сайтов для решения задач вашего бизнеса')

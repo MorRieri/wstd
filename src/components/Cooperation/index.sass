@@ -1,5 +1,6 @@
 .cooperation
   position: relative
+
   &__title
     @include font(64, 78)
     font-weight: 600
@@ -9,6 +10,7 @@
     width: 911px
     @include font(24, 38)
     margin-bottom: 80px
+
   &__layout
     max-width: 100%
     width: 911px
@@ -20,3 +22,19 @@
     position: absolute
     top: 0
     left: 911px
+
+  &--white
+    color: $pure-white
+
+  &--price
+    color: $pure-white
+
+    .cooperation__layout
+      grid-template-columns: 1fr 1fr 1fr
+    .card-advantage__title
+      @include font(26, 32)
+      margin-bottom: 24px
+      white-space: nowrap
+    .card-advantage__description
+      margin-bottom: 24px
+

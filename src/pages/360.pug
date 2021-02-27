@@ -1,0 +1,57 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Поддержка сайтов 360"
+  - var pageClass = ''
+  - var activePage = '360'
+
+block content
+  section.section.section--service-page
+    .container
+      .wrapper.wrapper--padding
+        +ScreenServices360
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +TrustMedicine
+
+  section.section.section--default.section--prices-360
+    .container
+      .wrapper.wrapper--padding
+        .tabs.tabs--white.js-tabs
+          p.tabs__title Виды, сроки, цены на создание сайтов
+          .tabs__nav
+            button.button.button--tab.tabs__tab.js-tabs-tab
+              span.button__text WordPress
+            button.button.button--tab.tabs__tab.js-tabs-tab
+              span.button__text 1C Битрикс
+          .tabs__panels
+            .tabs__panel.js-tabs-panel
+              .card-price-layout
+                +CardPriceMin
+                +CardPriceOptima
+                +CardPriceMax
+            .tabs__panel.js-tabs-panel
+              .card-price-layout
+                +CardPriceMin
+                +CardPriceOptima
+        .section.section--default
+          +CooperationWhite
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Faq
+
+  section.section.section--default
+    .container
+      .card-more-layout
+        +CardMoreBlue
+        +CardMoreBlue
+        +CardMoreBlue
+        +CardMoreBlue
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Form

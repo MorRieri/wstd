@@ -1,5 +1,5 @@
-mixin Cooperation
-  .cooperation
+mixin CooperationCommon
+  .cooperation&attributes(attributes)
     img.cooperation__bg(src="./assets/img/cooperation-test.png")
     p.cooperation__title Форматы сотрудничества
     p.cooperation__description Успех наших проектов заключается в качественном и детальном подходе. Мы стремимся сделать бизнес наших клиентов не только прибыльнее, но и повысить лояльность пациентов.
@@ -12,3 +12,28 @@ mixin Cooperation
         .card-advantage__title Оперативное обслуживание
         .card-advantage__subtitle Точечное решения проблем, когда вы глубоко погружены в собственный проект
         .card-advantage__description Решение конкретных задач по входящим запросам, без глобального планирования. Оплата за реализованные задачи. Стоимость часа — 1 300 рублей.
+
+mixin Cooperation
+  +CooperationCommon
+
+mixin CooperationWhite
+  +CooperationCommon.cooperation--white
+
+mixin CooperationPrice
+  .cooperation.cooperation--price
+    img.cooperation__bg(src="./assets/img/cooperation-test.png")
+    p.cooperation__title Как формируется стоимость?
+    p.cooperation__description Стоимость создания сайта упирается во время реализации и количество специалистов, которые работают над проектом, их квалификации и опыта работы. Чем сложнее сайт, тем дороже будет стоимость, потому что необходимо тратить много ресурсов.
+    .cooperation__layout
+      .cooperation__advantages.card-advantage
+        .card-advantage__title Front-end
+        .card-advantage__description Точечное решения проблем, когда вы глубоко погружены в собственный проект
+        .card-advantage__price 1 300 ₽ в час
+      .cooperation__advantages.card-advantage
+        .card-advantage__title Back-end
+        .card-advantage__description Точечное решения проблем, когда вы глубоко погружены в собственный проект
+        .card-advantage__price 1 500 ₽ в час
+      .cooperation__advantages.card-advantage
+        .card-advantage__title Интернет-маркетинг
+        .card-advantage__description Точечное решения проблем, когда вы глубоко погружены в собственный проект
+        .card-advantage__price 1 100 ₽ в час

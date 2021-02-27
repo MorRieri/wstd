@@ -1,0 +1,130 @@
+.article
+  &__screen
+    width: 100%
+    height: 800px
+    object-fit: cover
+    object-position: center
+
+  &__box
+    position: relative
+    display: flex
+
+  &__content
+    padding-right: 500px
+    padding-top: 48px
+
+  &__section
+    margin-bottom: 125px
+
+  &__image
+    width: 100%
+
+  &__title
+    @include font(80, 96)
+    font-weight: 600
+
+  &__subtitle
+    @include font(64, 88)
+    font-weight: 600
+    & + *
+      margin-top: 48px
+
+
+  &__subsubtitle
+    @include font(36, 40)
+    font-weight: 600
+    & + *
+      margin-top: 48px
+    & + .article__product-list
+      margin-top: 75px
+
+  &__text
+    @include font(24, 38)
+    & + .article__text
+      margin-top: 48px
+
+  &__caption
+    display: block
+    @include font(18, 28)
+    margin-top: 24px
+
+  &__list
+    padding-left: 32px
+    li
+      @include font(24, 38)
+      & + li
+        margin-top: 24px
+
+  &__blockquote
+    @include font(24, 38)
+    font-weight: 700
+    padding: 72px 70px
+
+  &__statement
+    padding: 72px 70px
+
+  &__advantages
+    display: grid
+    grid-gap: 32px
+    grid-template-columns: 1fr 1fr 1fr
+    padding: 72px 0
+
+  .card-product-layout
+    grid-gap: 32px
+    grid-template-columns: 270px 1fr
+
+  &__next-span
+    display: block
+    @include font(24, 28)
+    font-weight: 600
+    margin-bottom: 75px
+
+  &__aside
+    position: absolute
+    top: 0
+    right: 0
+    flex-shrink: 0
+    width: 380px
+    height: 100%
+    border-left: 1px solid $border-grey
+  &__aside-box
+    position: sticky
+    top: 0
+    max-width: 100%
+    width: 300px
+    padding: 48px 0 48px 32px
+
+  &__aside-title
+    @include font(24, 38)
+    font-weight: 600
+    margin-bottom: 32px
+  &__aside-list
+    list-style: none
+  &__aside-item
+    position: relative
+    @include font(18, 22)
+    margin-bottom: 32px
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    opacity: 0.25
+    cursor: pointer
+    @include pseudo-before
+      position: absolute
+      top: 50%
+      left: 0
+      display: block
+      height: 1px
+      width: 14px
+      margin-right: 8px
+      background: $text-black
+      opacity: 0
+    &.active
+      padding-left: 22px
+      opacity: 1
+      &::before
+        opacity: 1
+
+  .products-list__item
+    padding: 0
+

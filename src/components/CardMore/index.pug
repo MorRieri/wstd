@@ -1,5 +1,5 @@
-mixin CardMore
-  .card-more
+mixin CardMoreCommon
+  .card-more&attributes(attributes)
     p.card-more__title SERM - УПРАВЛЕНИЕ РЕПУТАЦИЕЙ КЛИНИКИ
     ul.card-more__list
       li.card-more__item
@@ -14,3 +14,9 @@ mixin CardMore
       li.card-more__item
         img.card-more__item-image(src='./assets/img/card-more-test.png')
         p.card-more__item-text Контроль новых отзывов от клиентов клиники
+
+mixin CardMore
+  +CardMoreCommon
+
+mixin CardMoreBlue
+  +CardMoreCommon.card-more--blue

@@ -104,49 +104,25 @@ faqs.forEach(function (faq) {
     });
   });
 });
-
-function findVideos() {
-  var videos = document.querySelectorAll('.video-content__video');
-
-  for (var i = 0; i < videos.length; i++) {
-    setupVideo(videos[i]);
-  }
-}
-
-function setupVideo(video) {
-  var link = video.querySelector('.video-content__video-link');
-  var media = video.querySelector('.video-content__video-media');
-  var button = video.querySelector('.video-content__video-button');
-  var id = parseMediaURL(media);
-  video.addEventListener('click', function () {
-    var iframe = createIframe(id);
-    link.remove();
-    button.remove();
-    video.appendChild(iframe);
+var videos = document.querySelectorAll('.js-video');
+videos.forEach(function (video) {
+  var btns = video.querySelectorAll('.js-video-button');
+  var iframe = video.querySelector('.js-video-iframe');
+  if (!iframe) return;
+  btns.forEach(function (btn) {
+    var attr = btn.getAttribute('data-id');
+    btn.children[0].src = "http://i3.ytimg.com/vi/".concat(attr, "/maxresdefault.jpg");
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      btns.forEach(function (b) {
+        if (b === btn) {
+          b.classList.add('active');
+          iframe.src = "https://www.youtube.com/embed/".concat(attr, "?rel=0&amp;showinfo=0&amp;autoplay=0");
+        } else {
+          b.classList.remove('active');
+        }
+      });
+    });
   });
-  link.removeAttribute('href');
-  video.classList.add('video-content__video--enabled');
-}
-
-function parseMediaURL(media) {
-  var regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-  var url = media.src;
-  var match = url.match(regexp);
-  return match[1];
-}
-
-function createIframe(id) {
-  var iframe = document.createElement('iframe');
-  iframe.setAttribute('allowfullscreen', '');
-  iframe.setAttribute('allow', 'autoplay');
-  iframe.setAttribute('src', generateURL(id));
-  iframe.classList.add('video__media');
-  return iframe;
-}
-
-function generateURL(id) {
-  var query = '?rel=0&showinfo=0&autoplay=1';
-  return 'https://www.youtube.com/embed/' + id + query;
-}
-
-findVideos();
+  btns[0].click();
+});

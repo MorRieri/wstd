@@ -1,0 +1,35 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Продвижение в топ"
+  - var pageClass = ''
+  - var activePage = 'promotion'
+
+block content
+  section.section.section--service-page
+    .container
+      .wrapper.wrapper--padding
+        +ScreenServicesPromotion
+  section.section.section--default
+    .container
+      .slider-type-container
+        +CardTypeKey
+        +SliderTypeKey
+  section.section.section--default
+    .container
+      .excellence.wrapper.wrapper--padding
+        .excellence__list
+          +ExcellenceBlockPromotion
+        img.excellence__image(src="./assets/img/excellent-test-promotion.png")
+
+  section.section.section--default
+    .container
+      .card-services-layout.wrapper.wrapper--padding
+        +CardServicesRed
+        +CardServicesRed
+        +CardServicesRed
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Form

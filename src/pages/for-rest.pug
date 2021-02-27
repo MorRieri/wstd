@@ -1,0 +1,69 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Для ресторанов"
+  - var pageClass = ''
+  - var activePage = 'for-rest'
+
+block content
+  section.section.section--service-page
+    .container
+      .wrapper.wrapper--padding
+        +ScreenServicesRest
+  section.section.section--default
+    .container
+      .slider-type-container
+        +CardTypeRest
+        +SliderTypeRest
+  section.section.section--default
+    .container
+      .excellence.wrapper.wrapper--padding
+        .excellence__list
+          +ExcellenceListMedicine
+        img.excellence__image(src="./assets/img/excellent-test-rest.png")
+  section.section.section--default
+    .container
+      +CardServicesContainer
+  section.section.section--default
+    .container
+      +TrustMedicine.wrapper.wrapper--padding
+  section.section.section--default.section--prices-rest
+    .container
+      .wrapper.wrapper--padding
+        .tabs.js-tabs
+          p.tabs__title Пакеты цен
+          .tabs__nav
+            button.button.button--tab.tabs__tab.js-tabs-tab
+              span.button__text Реклама
+            button.button.button--tab.tabs__tab.js-tabs-tab
+              span.button__text Поддержка
+          .tabs__panels
+            .tabs__panel.js-tabs-panel
+              .card-price-layout
+                +CardPriceMin
+                +CardPriceOptima
+                +CardPriceMax
+            .tabs__panel.js-tabs-panel
+              .card-price-layout
+                +CardPriceMin
+                +CardPriceOptima
+        .section.section--default
+          +Cooperation
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Faq
+
+  section.section.section--default
+    .container
+      .card-more-layout
+        +CardMore
+        +CardMore
+        +CardMore
+        +CardMore
+
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Form
