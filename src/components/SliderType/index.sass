@@ -22,12 +22,30 @@
     cursor: pointer
     z-index: 1
 
+    @include desktop
+        top:  calc(50% - 18px)
+
     .icon
       width: 48px
       height: 48px
 
+      @include desktop
+        width: 36px
+        height: 36px
+
+
     &--prev
       left: -24px
+
+      @include desktop
+        left: -18px
+
     &--next
       right: 24px
       transform: rotate(180deg)
+
+      @include screen_lg
+        right: -24px
+
+      @include desktop
+        right: -18px

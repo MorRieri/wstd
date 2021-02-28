@@ -3,10 +3,24 @@
   align-items: flex-start
   justify-content: space-between
 
+  @include desktop
+    flex-direction: column
+    justify-content: flex-start
+
   &__image
+    max-width: 100%
     width: 570px
+
+    @include desktop
+      margin: 0 auto 48px
+
+    @include tablet
+      margin: 0 auto 32px
 
   &__box
     margin-left: 64px
     width: 570px
     max-width: 100%
+
+    @include desktop
+      margin: 0 auto

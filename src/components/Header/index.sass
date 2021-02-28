@@ -1,1 +1,57 @@
 .header
+
+  @include screen
+    .section-row__contact span
+      display: none
+
+    .section-row__button-start
+      margin-left: 24px
+
+    .section-row__types
+      padding: 0 16px
+
+    .header-types__name
+      padding-right: 12px
+      &::before
+        content: none
+
+    .header-types__nav-item
+      margin-right: 12px
+
+  @include desktop
+    .section-row--middle,
+    .section-row__nav
+      display: none
+
+    .section-row__logo
+      margin-right: auto
+
+    .section-row__inner
+      padding-top: 0
+      padding-bottom: 0
+
+    .section-row--top .section-row__inner
+      max-height: 64px
+      height: 64px
+
+    .section-row__menu
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      padding-right: 24px
+      margin-right: 24px
+      border-right: 1px solid $border-grey
+
+  @include tablet
+    .section-row__button-start,
+    .section-row__contact
+      display: none
+
+    .section-row__menu
+      order: 1
+      padding-right: 0
+      margin-right: 12px
+      padding-left: 28px
+      border-right: none
+      border-left: 1px solid $border-grey

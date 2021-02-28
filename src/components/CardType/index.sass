@@ -10,6 +10,15 @@
   border-radius: 20px
   background-color: $pure-white
 
+  @include desktop
+    width: 290px
+    height: 438px
+    padding: 81px 24px 24px
+
+  @include tablet
+    width: 100%
+    height: auto
+
   &__circle
     position: absolute
     top: -64px
@@ -20,6 +29,10 @@
     border: 10px solid $background
     border-radius: 50%
     overflow: hidden
+
+    @include desktop
+      width: 108px
+      height: 108px
 
     img
       position: absolute
@@ -35,17 +48,32 @@
     opacity: 0.25
     margin-bottom: 16px
 
+    @include desktop
+      margin-bottom: 12px
+
   &__title
     @include font(32, 40)
     font-weight: 600
     margin-bottom: 32px
 
+    @include desktop
+      margin-bottom: 20px
+
+    @include tablet
+      margin-bottom: 430px
+
   &__description
     @include font(18, 28)
+
+    @include tablet
+      text-align: center
 
   &__button
     @include font(16, 20)
     margin-top: auto
+
+    @include tablet
+      margin: 24px auto 0
 
     &--project
       padding: 14px 28px

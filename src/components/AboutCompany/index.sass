@@ -3,16 +3,40 @@
   display: flex
   flex-wrap: wrap
 
+  @include tablet
+    flex-direction: column
+
   &__description
     padding-top: 190px
     padding-bottom: 190px
 
+    @include screen
+      padding-top: 120px
+      padding-bottom: 120px
+
+    @include desktop
+      padding-top: 62px
+      padding-bottom: 62px
+
   &__image
     position: absolute
-    top: -403px;
-    left: 50%;
-    z-index: -1;
+    top: -403px
+    left: 50%
+    z-index: -1
 
+    @include screen
+      width: 900px
+
+    @include desktop
+      width: 600px
+      top: -260px
+
+    @include tablet
+      position: static
+      width: 100%
+      height: 400px
+      object-fit: cover
+      object-position: center bottom
 
   &__cards
     width: 100%
@@ -21,10 +45,17 @@
     max-width: 100%
     width: 570px
 
+    @include tablet
+      margin: 0 auto
+      text-align: center
+
   &__title
     @include font(80, 96)
     font-weight: 600
     margin-bottom: 32px
+
+    @include tablet
+      @include font(36, 44)
 
   &__text
     max-width: 100%
@@ -33,10 +64,20 @@
     font-weight: 500
     margin-bottom: 40px
 
+    @include tablet
+      margin: 0 auto 24px
+
   &__actions
     display: flex
     align-items: center
     justify-content: flex-start
 
+    @include tablet
+      flex-direction: column-reverse
+      align-items: center
+
   &__button
     margin-right: 40px
+
+    @include tablet
+      margin: 0 0 16px

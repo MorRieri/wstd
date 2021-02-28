@@ -1,2 +1,85 @@
 .footer
   margin-top: 125px
+
+  @include screen
+    .section-row--top .section-row__inner,
+    .section-row--middle .section-row__inner
+      flex-wrap: wrap
+      max-height: inherit
+
+    .section-row__nav
+      order: 1
+      width: 100%
+      padding-top: 16px
+
+    .section-row__logo
+      margin-right: auto
+
+    .section-row__inner
+      padding-top: 16px
+      padding-bottom: 16px
+
+    .section-row__types
+      width: 100%
+      padding: 0
+      margin-bottom: 16px
+      &::after
+        content: none
+
+      &:last-child
+        margin-bottom: 0
+
+  @include tablet
+    padding-bottom: 32px
+
+    .section-row--middle,
+    .section-row__button-start,
+    .section-row__contact
+      display: none
+
+    .section-row
+      border: none
+
+    .section-row .section-row__inner
+      max-height: inherit
+
+    .section-row .section-row__inner,
+    .section-row__nav
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      padding: 0
+
+    .section-row__logo,
+    .section-row__nav-item,
+    .section-row__socials
+      margin: 0
+
+    .section-row__logo,
+    .section-row__nav,
+    .section-row__socials
+      margin: 0 0 32px
+
+    .section-row__nav-item
+      margin-bottom: 24px
+
+    .section-row__socials
+      order: -2
+
+    .section-row__socials
+      justify-content: space-between
+      flex-wrap: wrap
+      width: 160px
+
+    .socials__item
+      width: 32%
+      margin: 0 0 16px
+
+      &--download
+        order: 1
+        width: 100%
+        margin-bottom: 0
+
+    .section-row__politic
+      order: -1
+      margin: 0 0 16px
