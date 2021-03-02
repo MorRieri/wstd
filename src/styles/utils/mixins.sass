@@ -42,15 +42,15 @@
 		font-style: $style
 
 		@if $asset-pipeline == true
-			src: font-url('#{$file-path}.eot')
-			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.woff2') format('woff2'), font-url('#{$file-path}.ttf') format('truetype')
+			src: url('#{$file-path}.eot')
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.ttf') format('truetype')
 		@else
 			src: url('#{$file-path}.eot')
-			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.ttf') format('truetype')
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.ttf') format('truetype')
 
 @mixin font($font-size, $line-height)
-  font-size: ($font-size/$font_base) * 1rem;
-  line-height: ($line-height/$font_base) * 1rem;
+  font-size: ($font-size/$font_base) * 1rem
+  line-height: ($line-height/$font_base) * 1rem
 
 // OTHER
 @mixin hover

@@ -6,3 +6,6 @@
 //=./Faq/index.js
 //=./VideoContent/index.js
 //=./Article/index.js
+//=./Case/case.js
+
+

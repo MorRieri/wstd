@@ -1,7 +1,9 @@
 .card-product
   padding: 56px 0 32px
   border-bottom: 1px solid $border-grey
-
+  max-width: 1474px
+  width: 100%
+  flex-shrink: 0
   &__title
     @include font(36, 40)
     font-weight: 600
@@ -27,3 +29,53 @@
     @include font(18, 28)
     font-weight: 500
     margin-bottom: 24px
+
+  &__button-review
+    position: relative
+    &:hover
+      .button__text
+        text-decoration: none
+      svg path
+        fill: $orange
+      .card-product__button-review-content
+        display: flex
+.card-product__button-review-content
+  display: none
+  position: absolute
+  z-index: 20
+  top: 110%
+  left: 0
+  width: 514px
+  background-color: $text_black
+  border-radius: 16px
+  padding: 24px
+  color: $pure_white
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  p
+    font-size: 1rem
+    font-weight: 400
+    text-align: left
+    line-height: 1.5
+    opacity: 0.8
+  span
+    font-size: 1rem
+    font-weight: 600
+    opacity: 1
+.card-product__button-review-author
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  margin-top: 1rem
+  img
+    margin-right: 2rem
+    width: 48px
+    height: 48px
+    border-radius: 100%
+.card-product__button-review-author-text
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start

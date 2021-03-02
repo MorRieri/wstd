@@ -3,7 +3,17 @@
   width: 270px
   height: 446px
   background-color: transparent
-
+  &:hover
+    & .slider-card-type__box
+      background-color: rgba($pure-white, 1)
+      width: 100%
+      padding-top: 48px
+    & .slider-card-type__blur
+      top: 0
+    & .slider-card-type__button
+      opacity: 1
+      height: auto
+      margin-top: 16px
   @include desktop
     width: 190px
     height: 304px
@@ -52,15 +62,35 @@
     @include font(18, 24)
     font-weight: 600
     margin-bottom: 8px
-
   &__box
     width: calc(100% - 40px)
     background-color: rgba($pure-white, 0.55)
     border-radius: 0 0 20px 20px
     padding: 64px 24px 24px
     margin: -20px auto
-
+    transition: width 0.3s ease-in-out
     @include desktop
       width: 100%
       padding: 16px 24px
       margin: 0
+  &__button
+    display: flex
+    opacity: 0
+    height: 0
+    transition: opacity 0.2s 0.1s ease-in
+    justify-content: center
+    align-items: center
+    width: 100%
+
+    & .button__text
+      color: $blue
+      font-weight: 600
+    & svg rect
+      fill: $blue
+.slider-card-type__description,
+.slider-card-type__title
+  max-width: 200px
+  width: 100%
+
+
+

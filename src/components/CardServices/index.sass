@@ -1,7 +1,14 @@
 .card-services
-  padding: 56px 52px
+  padding: 96px 52px 56px
   border-radius: 20px
-
+  position: relative
+  margin-bottom: 106px
+  &::before
+    content: url("../img/elements/75.svg")
+    position: absolute
+    top: 0
+    left: 51px
+    transform: translateY(-55%)
   &__title
     @include font(36, 44)
     font-weight: 500

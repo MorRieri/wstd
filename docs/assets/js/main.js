@@ -126,3 +126,16 @@ videos.forEach(function (video) {
   });
   btns[0].click();
 });
+var openCase = document.querySelectorAll('.js-openCase');
+
+openCase.onclick = function () {
+  var target = this.getAttribute('data-case');
+  console.log(target);
+  document.getElementById(target).classList.add("active");
+};
+
+var closeCase = document.querySelectorAll('.js-closeCase');
+
+closeCase.onclick = function () {
+  document.getElementsByClassName('.case__wrapper').classList.remove("active");
+};
