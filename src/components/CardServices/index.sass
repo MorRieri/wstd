@@ -10,7 +10,9 @@
     left: 51px
     transform: translateY(-55%)
   &__title
-    @include font(36, 44)
+    //@include font(36, 44)
+    font-size: clamp(18px, calc(18px + (36 - 18) * ((100vw - 768px) / (1920 - 768))), 36px)
+    line-height: 1.2
     font-weight: 500
     margin-bottom: 64px
 
@@ -25,12 +27,16 @@
     border-radius: 20px
 
   &__name
-    @include font(26, 32)
+    //@include font(26, 32)
+    font-size: clamp(16px, calc(16px + (26 - 16) * ((100vw - 768px) / (1920 - 768))), 26px)
+    line-height: 1.2
     font-weight: 600
     margin-bottom: 16px
 
   &__description
-    @include font(18, 28)
+    //@include font(18, 28)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.6
     font-weight: 500
 
   &--white

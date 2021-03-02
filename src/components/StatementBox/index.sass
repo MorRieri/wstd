@@ -8,7 +8,9 @@
 
 
   &__description
-    @include font(18, 28)
+    //@include font(18, 28)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320))), 18px)
+    line-height: 1.6
     margin-bottom: 24px
 
   &__author
@@ -36,6 +38,10 @@
   &__name
     margin-bottom: 8px
     font-weight: 600
+    font-size: clamp(14px, calc(14px + (16 - 14) * ((100vw - 768px) / (1920 - 768))), 16px)
+    line-height: 1.2
 
   &__type
-    @include font(15, 18)
+    //@include font(15, 18)
+    font-size: 15px
+    line-height: 1.2

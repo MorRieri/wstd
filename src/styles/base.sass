@@ -27,15 +27,17 @@ a
 
 html
   font-family: "Golos", 'Roboto', 'Arial', sans-serif
-  font-size: $font_base * 1px
-  line-height: $font_base * 1.2 * 1px
+  //font-size: $font_base * 1px
+  font-size: clamp(10px, calc(10px + (16 - 10) * ((100vw - 768px) / (1920 - 768))), 16px)
+  line-height: 1.4
+  //line-height: $font_base * 1.2 * 1px
   font-weight: 400
   color: $text_black
 
-  @include screen_lg
+  //@include screen_lg
     font-size: ($font_base - 1) * 1px
 
-  @include desktop
+  //@include desktop
     font-size: ($font_base - 2) * 1px
 
 body
@@ -129,28 +131,44 @@ body
   grid-gap: 100px
   grid-template-columns: 1fr 1fr
 
+@media (max-width: 1440px)
+  .card-product-layout,
+  .card-news-layout
+    grid-gap: 3rem
+    grid-template-columns: 1fr
+
 .services-page
   &__title
-    @include font(80, 96)
+    //@include font(80, 96)
+    font-size: clamp(36px, calc(36px + (80 - 36) * ((100vw - 768px) / (1920 - 768))), 80px)
+    line-height: 1.2
     font-weight: 600
     margin-bottom: 56px
 
 .card-advantage
   &__title
-    @include font(24, 38)
+    //@include font(24, 38)
+    font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
+    line-height: 1.4
     font-weight: 600
     margin-bottom: 16px
 
   &__subtitle
-    @include font(18, 30)
+    //@include font(18, 30)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.6
     font-weight: 600
     margin-bottom: 16px
 
   &__description
-    @include font(18, 30)
+    //@include font(18, 30)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.6
 
   &__price
-    @include font(26, 40)
+    //@include font(26, 40)
+    font-size: clamp(16px, calc(16px + (26 - 16) * ((100vw - 768px) / (1920 - 768))), 26px)
+    line-height: 1.4
     font-weight: 500
 
 .excellence
@@ -168,11 +186,26 @@ body
   display: grid
   grid-gap: 32px
   grid-template-columns: 1fr 1fr 1fr
+@media (max-width: 992px)
+  .card-price-layout
+    grid-template-columns: repeat(3, 320px)
+    width: 100%
+    padding-bottom: 16px
+    overflow-x: scroll
 
 .card-more-layout
   display: grid
   grid-gap: 32px
   grid-template-columns: 1fr 1fr 1fr 1fr
+  padding: 0 72px
+@media (max-width: 1280px)
+  .card-more-layout
+    width: 100%
+    padding: 0 24px
+    padding-bottom: 16px
+    overflow-x: scroll
+    grid-template-columns: repeat(4, 320px)
+
 
 .card-services-layout
   display: grid

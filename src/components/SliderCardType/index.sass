@@ -59,7 +59,9 @@
       border-radius: 4px
 
   &__title
-    @include font(18, 24)
+    //@include font(18, 24)
+    font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.4
     font-weight: 600
     margin-bottom: 8px
   &__box
@@ -87,10 +89,26 @@
       font-weight: 600
     & svg rect
       fill: $blue
+  &__description
+    font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - 768px) / (1920 - 768))), 16px)
+    line-height: 1.4
+
 .slider-card-type__description,
 .slider-card-type__title
   max-width: 200px
   width: 100%
 
 
-
+@media (max-width: 992px)
+  .slider-card-type__button
+    display: none
+  .slider-card-type
+    &:hover
+      & .slider-card-type__box
+        background-color: rgba($pure-white, 1)
+        width: 100%
+        padding-top: 48px
+      & .slider-card-type__blur
+        top: 0
+      & .slider-card-type__button
+        display: none

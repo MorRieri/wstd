@@ -1,6 +1,7 @@
 .case
   background-color: $background
   max-width: 1400px
+  width: 100%
   position: relative
   margin: 0 auto
   &__close
@@ -80,16 +81,16 @@
 
 .case__maintitle
   font-weight: 600
-  font-size: 64px
-  line-height: 77px
+  font-size: clamp(26px, calc(246px + (64 - 26) * ((100vw - 768px) / (1920 - 768))), 64px)
+  line-height: 1.3
   color: $text_black
   margin-bottom: 72px
 .case__date
   color: rgba($text_black, 0.25)
 .case__text
   font-weight: 400
-  font-size: 24px
-  line-height: 1.5
+  font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
+  line-height: 1.4
   color: #3F3F3F
 a.case__text
   color: $blue

@@ -12,14 +12,18 @@
     overflow: hidden
 
   &__title
-    @include font(36, 40)
+    //@include font(36, 40)
+    font-size: clamp(18px, calc(18px + (36 - 18) * ((100vw - 768px) / (1920 - 768))), 36px)
+    line-height: 1.2
     font-weight: 600
     margin-bottom: 16px
     max-width: 100%
     width: 650px
 
   &__date
-    @include font(16, 38)
+    //@include font(16, 38)
+    font-size: 16px
+    line-height: 2.2
     font-weight: 600
     opacity: 0.8
 
@@ -29,5 +33,7 @@
     align-items: flex-start
 
   &__text
-    @include font(18, 28)
+    //@include font(18, 28)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.6
     margin-bottom: 32px

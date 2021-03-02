@@ -24,12 +24,16 @@
       background: $gradient3
 
   &__title
-    @include font(36, 40)
+    //@include font(36, 40)
+    font-size: clamp(18px, calc(18px + (36 - 18) * ((100vw - 768px) / (1920 - 768))), 36px)
+    line-height: 1.2
     font-weight: 500
     margin-bottom: 8px
 
   &__price
-    @include font(26, 40)
+    //@include font(26, 40)
+    font-size: clamp(16px, calc(16px + (26 - 16) * ((100vw - 768px) / (1920 - 768))), 26px)
+    line-height: 1.4
     font-weight: 500
 
   &__list
@@ -38,7 +42,9 @@
     margin-bottom: 40px
 
   &__list-item
-    @include font(16, 28)
+    //@include font(16, 28)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.6
     font-weight: 500
     margin-bottom: 24px
 
@@ -49,6 +55,12 @@
       opacity: 0.15
 
   &__button
-    @include font(18, 24)
+    //@include font(18, 24)
+    font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.4
     font-weight: 500
     padding: 14px 28px
+
+@media (max-width: 992px)
+  .card-price__list-item
+    margin-bottom: 18px

@@ -3,7 +3,9 @@
   align-items: center
   justify-content: center
   padding: 8px 24px
-  @include font(14, 24)
+  //@include font(14, 24)
+  font-size: 14px
+  line-height: 1.6
   font-weight: 500
   border-radius: 100px
   outline: none
@@ -51,11 +53,15 @@
 
   &--more
     padding: 12px 0
-    @include font(16, 20)
+    //@include font(16, 20)
+    font-size: 16px
+    line-height: 1.25
     font-weight: 600
 
   &--review
-    @include font(16, 20)
+    //@include font(16, 20)
+    font-size: 16px
+    line-height: 1.25
     font-weight: 400
     padding: 0
     .button__text
@@ -66,12 +72,16 @@
       text-underline-offset: 6px
 
   &--collapse
-    @include font(16, 20)
+    //@include font(16, 20)
+    font-size: 16px
+    line-height: 1.25
     font-weight: 500
     background: $pure-white
 
   &--tab
-    @include font(26, 40)
+    //@include font(26, 40)
+    font-size: clamp(18px, calc(18px + (26 - 18) * ((100vw - 768px) / (1920 - 768))), 26px)
+    line-height: 1.6
     background: transparent
     border: 1px dashed $text_black
     opacity: 0.35

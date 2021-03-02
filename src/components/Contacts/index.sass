@@ -8,7 +8,9 @@
     align-items: flex-start
 
   &__title
-    @include font(48, 60)
+    //@include font(48, 60)
+    font-size: clamp(1824px, calc(18px + (48 - 24) * ((100vw - 768px) / (1920 - 768))), 48px)
+    line-height: 1.6
     font-weight: 500
     margin-bottom: 24px
     &:last-child

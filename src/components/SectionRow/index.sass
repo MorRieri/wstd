@@ -8,7 +8,9 @@
 
   &__logo
     margin-right: 56px
-    @include font(24, 28)
+    //@include font(24, 28)
+    font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
+    line-height: 1.2
     font-weight: 700
     letter-spacing: 0.09rem
     text-transform: uppercase
@@ -25,7 +27,9 @@
 
   &__nav-item
     margin-right: 24px
-    @include font(16, 28)
+    //@include font(16, 28)
+    font-size: 16px
+    line-height: 1.75
     font-weight: 500
     cursor: pointer
     &:last-child
@@ -40,6 +44,7 @@
     cursor: pointer
     span
       margin-right: 12px
+      font-size: 14px
 
     @include screen_lg
       margin-left: 24px
@@ -72,7 +77,9 @@
         display: none
 
   &__copyright
-    @include font(14, 20)
+    //@include font(14, 20)
+    font-size: clamp(12px, calc(12px + (14 - 12) * ((100vw - 768px) / (1920 - 768))), 14px)
+    line-height: 1.6
     font-weight: 500
 
   &__socials
@@ -80,7 +87,8 @@
 
   &__politic
     margin-left: 48px
-    @include font(14, 20)
+    //@include font(14, 20)
+    font-size: clamp(12px, calc(12px + (14 - 12) * ((100vw - 768px) / (1920 - 768))), 14px)
     font-weight: 500
 
   &__menu

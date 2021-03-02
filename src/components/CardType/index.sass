@@ -43,7 +43,9 @@
       transform: translate(-50%, -50%)
 
   &__pre
-    @include font(18, 22)
+    //@include font(18, 22)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.6
     font-weight: 500
     opacity: 0.25
     margin-bottom: 16px
@@ -52,7 +54,9 @@
       margin-bottom: 12px
 
   &__title
-    @include font(32, 40)
+    //@include font(32, 40)
+    font-size: clamp(24px, calc(24px + (32 - 24) * ((100vw - 768px) / (1920 - 768))), 32px)
+    line-height: 1.2
     font-weight: 600
     margin-bottom: 32px
 
@@ -63,13 +67,17 @@
       margin-bottom: 430px
 
   &__description
-    @include font(18, 28)
+    //@include font(18, 28)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.6
 
     @include tablet
       text-align: center
 
   &__button
-    @include font(16, 20)
+    //@include font(16, 20)
+    font-size: 16px
+    line-height: 1.6
     margin-top: auto
 
     @include tablet

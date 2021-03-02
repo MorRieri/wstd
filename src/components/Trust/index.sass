@@ -1,14 +1,22 @@
 .trust
   &__title
-    @include font(64, 78)
+    //@include font(64, 78)
+    font-size: clamp(26px, calc(26px + (64 - 26) * ((100vw - 768px) / (1920 - 768))), 64px)
+    line-height: 1.2
     font-weight: 600
     margin-bottom: 48px
   &__description
     max-width: 100%
     width: 1022px
-    @include font(24, 38)
+    //@include font(24, 38)
+    font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
+    line-height: 1.4
     margin-bottom: 56px
   &__layout
     display: grid
     grid-gap: 80px
     grid-template-columns: 1fr 1fr 1fr 1fr
+
+@media (max-width: 992px)
+  .trust__layout
+    grid-gap: 3rem

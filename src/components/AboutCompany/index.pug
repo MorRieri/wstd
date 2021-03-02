@@ -1,6 +1,8 @@
 mixin AboutCompany
   .about-company&attributes(attributes)
-    img.about-company__image(src="./assets/img/about-company-test.png")
+    picture.about-company__image
+      source(srcset="./assets/img/about-company-test_tablet_v.png" media="(max-width: 991px)" width="100%")
+      img(srcset="./assets/img/about-company-test.png" media="(min-width: 992px)" width="100%")
     .about-company__description.wrapper.wrapper--padding
       .about-company__box
         p.about-company__title Веб-студия Webster STD
@@ -15,5 +17,3 @@ mixin AboutCompany
               <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2933 18.2933C10.9023 18.6842 10.9023 19.3162 11.2933 19.7072C11.6843 20.0982 12.3163 20.0982 12.7073 19.7072L17.7073 14.7073C18.0983 14.3163 18.0983 13.6842 17.7073 13.2933L12.7073 8.29325C12.3163 7.90225 11.6843 7.90225 11.2933 8.29325C10.9023 8.68425 10.9023 9.31625 11.2933 9.70725L15.5863 14.0002L11.2933 18.2933Z" fill="white"/>
             </svg>
 
-    .about-company__cards
-      +CardServicesContainer

@@ -7,60 +7,38 @@
     flex-direction: column
 
   &__description
-    padding-top: 190px
-    padding-bottom: 190px
-
-    @include screen
-      padding-top: 120px
-      padding-bottom: 120px
-
-    @include desktop
-      padding-top: 62px
-      padding-bottom: 62px
+    padding-top: 10rem
+    padding-bottom: 10rem
+    padding-left: 10rem
 
   &__image
     position: absolute
-    top: -403px
-    left: 50%
+    top: -40px
+    right: -72px
     z-index: -1
-
-    @include screen
-      width: 900px
-
-    @include desktop
-      width: 600px
-      top: -260px
-
-    @include tablet
-      position: static
-      width: 100%
-      height: 400px
-      object-fit: cover
-      object-position: center bottom
-
-  &__cards
-    width: 100%
+    height: auto
+    width: 54%
 
   &__box
     max-width: 100%
-    width: 570px
+    width: 50%
 
     @include tablet
       margin: 0 auto
       text-align: center
+      width: 50%
 
   &__title
-    @include font(80, 96)
+    font-size: clamp(36px, calc(36px + (80 - 36) * ((100vw - 768px) / (1920 - 768))), 80px)
+    line-height: 1.2
     font-weight: 600
     margin-bottom: 32px
-
-    @include tablet
-      @include font(36, 44)
 
   &__text
     max-width: 100%
     width: 450px
-    @include font(18, 28)
+    font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
+    line-height: 1.4
     font-weight: 500
     margin-bottom: 40px
 
@@ -81,3 +59,29 @@
 
     @include tablet
       margin: 0 0 16px
+
+@media (max-width: 768px)
+  .about-company__description
+    padding: 6rem
+  .about-company__box
+    width: 50%
+  .about-company__actions
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+@media (max-width: 580px)
+  .about-company
+    flex-direction: column
+  .about-company__image
+    position: static
+    width: 100%
+  .about-company__box
+    width: 100%
+  .about-company__description
+    width: 100%
+    padding: 16px
+  .about-company__actions
+    justify-content: center
+    align-items: center
+    flex-direction: column-reverse
