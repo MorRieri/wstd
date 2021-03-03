@@ -1,7 +1,7 @@
 .card-news
   padding: 56px 0 32px
   border-bottom: 1px solid $border-grey
-
+  width: 100%
   &__image
     width: 100%
     height: 480px
@@ -17,9 +17,10 @@
     line-height: 1.2
     font-weight: 600
     margin-bottom: 16px
-    max-width: 100%
-    width: 650px
-
+    max-width: 650px
+    width: 100%
+  &__column
+    width: 100%
   &__date
     //@include font(16, 38)
     font-size: 16px
@@ -37,3 +38,7 @@
     font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
     line-height: 1.6
     margin-bottom: 32px
+@media (max-width: 992px)
+  .card-news__image
+    width: 100%
+    height: auto

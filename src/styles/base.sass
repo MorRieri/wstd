@@ -49,8 +49,8 @@ body
     overflow: visible
 
 .container
-  max-width: 100%
-  width: 1920px
+  width: 100%
+  max-width: 1920px
   margin: 0 auto
   padding-left: 72px
   padding-right: 72px
@@ -131,12 +131,6 @@ body
   grid-gap: 100px
   grid-template-columns: 1fr 1fr
 
-@media (max-width: 1440px)
-  .card-product-layout,
-  .card-news-layout
-    grid-gap: 3rem
-    grid-template-columns: 1fr
-
 .services-page
   &__title
     //@include font(80, 96)
@@ -146,6 +140,9 @@ body
     margin-bottom: 56px
 
 .card-advantage
+  display: flex
+  flex-direction: column
+  justify-content: space-between
   &__title
     //@include font(24, 38)
     font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
@@ -170,6 +167,7 @@ body
     font-size: clamp(16px, calc(16px + (26 - 16) * ((100vw - 768px) / (1920 - 768))), 26px)
     line-height: 1.4
     font-weight: 500
+    margin-top: auto
 
 .excellence
   display: flex
@@ -181,6 +179,10 @@ body
   &__image
     flex-shrink: 1
     width: 100%
+@media (max-width: 992px)
+  .excellence
+    flex-direction: column
+
 
 .card-price-layout
   display: grid
@@ -195,9 +197,9 @@ body
 
 .card-more-layout
   display: grid
-  grid-gap: 32px
+  grid-gap: 2rem
   grid-template-columns: 1fr 1fr 1fr 1fr
-  padding: 0 72px
+  padding: 0 4.5rem
 @media (max-width: 1280px)
   .card-more-layout
     width: 100%
@@ -207,9 +209,6 @@ body
     grid-template-columns: repeat(4, 320px)
 
 
-.card-services-layout
-  display: grid
-  grid-gap: 48px
-  grid-template-columns: 1fr
+
 
 

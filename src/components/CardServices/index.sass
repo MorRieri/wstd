@@ -4,17 +4,21 @@
   position: relative
   margin-bottom: 106px
   &::before
-    content: url("../img/elements/75.svg")
+    content: ""
+    background: url("../img/elements/75.svg")
+    background-size: 100%
+    width: 6rem
+    height: 6rem
     position: absolute
     top: 0
     left: 51px
     transform: translateY(-55%)
   &__title
     //@include font(36, 44)
-    font-size: clamp(18px, calc(18px + (36 - 18) * ((100vw - 768px) / (1920 - 768))), 36px)
+    font-size: clamp(24px, calc(24px + (36 - 24) * ((100vw - 768px) / (1920 - 768))), 36px)
     line-height: 1.2
     font-weight: 500
-    margin-bottom: 64px
+    margin-bottom: 4rem
 
   &__layout
     display: grid
@@ -55,3 +59,13 @@
     background-color: $red
     .card-services__item
       border-color: $pure_white
+
+@media (max-width: 992px)
+  .card-services-layout,
+  .card-services__layout
+    grid-template-columns: 1fr
+    grid-gap: 32px
+    justify-content: start
+  .card-services
+    padding: 4rem 2rem 2rem
+    margin-bottom: 6rem

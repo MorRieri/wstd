@@ -7,13 +7,12 @@ block variables
 
 block content
   section.section.section--contacts
-    .container
-      .contacts
-        .contacts__description
-          .contacts__box
-            a.contacts__title(href="#") +7 499 964-04-84
-            a.contacts__title(href="#") info@websterstd.com
-            a.contacts__title(href="#") Начать проект
-          +CardNotificationGuest
-          +SectionRowBottom(true).contacts__footer
-        .contacts__map
+    .contacts
+      .contacts__description
+        .contacts__box
+          a.contacts__title(href="#") +7 499 964-04-84
+          a.contacts__title(href="#") info@websterstd.com
+          button.contacts__title.js-openForm Начать проект
+        +CardNotificationGuest
+        +SectionRowBottom(true).contacts__footer
+      .contacts__map

@@ -1,6 +1,9 @@
 .cooperation
-  position: relative
-
+  display: grid
+  grid-template-columns: 60% 40%
+  &__wrapper
+    display: flex
+    flex-direction: column
   &__title
     //@include font(64, 78)
     font-size: clamp(26px, calc(26px + (64 - 26) * ((100vw - 768px) / (1920 - 768))), 64px)
@@ -9,7 +12,6 @@
     margin-bottom: 40px
   &__description
     max-width: 100%
-    width: 911px
     //@include font(24, 38)
     font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
     line-height: 1.4
@@ -17,15 +19,15 @@
 
   &__layout
     max-width: 100%
-    width: 911px
     display: grid
     grid-gap: 80px
     grid-template-columns: 1fr 1fr
-
+  &__bg-wrapper
+    display: grid
+    place-items: center
   &__bg
-    position: absolute
-    top: 0
-    left: 911px
+    width: 100%
+    object-fit: cover
 
   &--white
     color: $pure-white
@@ -43,4 +45,16 @@
       white-space: nowrap
     .card-advantage__description
       margin-bottom: 24px
+
+@media (max-width: 992px)
+  .cooperation
+    grid-template-columns: 1fr
+  .cooperation__bg-wrapper
+    display: none
+
+@media (max-width: 580px)
+  .cooperation--price .cooperation__layout
+    width: 100%
+    grid-template-columns: 1fr
+    grid-gap: 32px
 

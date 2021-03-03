@@ -2,15 +2,84 @@
   display: grid
   grid-template-columns: 1fr 1fr 1fr
   grid-gap: 32px
-  padding: 0 4.5rem
+  padding: 4rem 4.5rem 0
   img
     width: 100%
     max-height: 384px
     object-fit: cover
+.card-services__block
+  max-width: 520px
+  height: 100%
+  width: 100%
+  border-radius: 20px
+  padding: 4.5rem 1.5rem 2.5rem
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: flex-start
+  position: relative
+  &_white
+    background-color: $pure_white
+    color: $text_black
+    border: 1px solid #18A0FB
+    &::before
+      content: ""
+      background: url("../img/elements/75_white.png")
+      background-size: 100%
+      position: absolute
+      width: 6.5rem
+      height: 6.5rem
+      left: 2.5rem
+      top: 0
+      transform: translateY(-49%)
+  &_black
+    background-color: $text_black
+    color: $pure_white
+    border: 1px solid $text_black
+    &::before
+      content: ""
+      background: url("../img/elements/75_black.png")
+      background-size: 100%
+      position: absolute
+      width: 6.5rem
+      height: 6.5rem
+      left: 2.5rem
+      top: 0
+      transform: translateY(-49%)
+  &_red
+    background-color: #EB5757
+    color: $pure_white
+    border: 1px solid #EB5757
+    &::before
+      content: ""
+      background: url("../img/elements/75_red.png")
+      background-size: 100%
+      position: absolute
+      width: 6.5rem
+      height: 6.5rem
+      left: 2.5rem
+      top: 0
+      transform: translateY(-49%)
+.card-services__subtitle
+  font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 768px) / (1920 - 768))), 24px)
+  line-height: 1.4
+  font-weight: 600
+  margin-bottom: 16px
+  color: inherit
+
+.card-services__text
+  font-size: 1rem
+  line-height: 1.6rem
+  font-weight: 500
+  color: inherit
+  & .blue
+    color: $blue
+  & .red
+    color: $red
 
 @media (max-width: 992px)
   .card-services-container
-    padding: 0 16px 16px
+    padding: 4rem 16px 16px
     overflow-x: scroll
     width: 100%
     grid-template-columns: repeat(3, 350px)
