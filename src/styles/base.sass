@@ -131,6 +131,12 @@ body
   grid-gap: 100px
   grid-template-columns: 1fr 1fr
 
+@media (max-width: 992px)
+  .card-product-layout,
+  .card-news-layout
+    grid-gap: 3rem
+    grid-template-columns: 1fr
+
 .services-page
   &__title
     //@include font(80, 96)
