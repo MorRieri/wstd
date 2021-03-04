@@ -6,7 +6,8 @@ collapseButton.forEach(item => {
   if (!parentCollapseButton) return;
 
   item.addEventListener('click', (e) => {
-    e.preventDefault()
-    parentCollapseButton.classList.toggle('hide-collapse')
+    e.preventDefault();
+    item.classList.toggle('rotated');
+    parentCollapseButton.classList.toggle('hide-collapse');
   }, false)
 })

@@ -2,19 +2,35 @@ mixin CardServicesCommon
   .card-services&attributes(attributes)
     p.card-services__title Дизайн интерфейса - неотъемлемая часть создания сайта
     .card-services__layout
-      .card-services__item
+      .card-services__item.card-services__item--dashed
         p.card-services__name Прототипирование
         p.card-services__description На основе технического задания команда дизайнеров начинает первые шаги к рабочему интерфейсу - прототипирование блоков графического и текстового контента
-      .card-services__item
+      .card-services__item.card-services__item--dashed
         p.card-services__name Верстка
         p.card-services__description Выделяем этот этап создания сайта, так как наш подход отличается от многих других. В нем принимают активное участие seo-специалситы и контролируют семантичность и валидность верстки, адаптивность, внедрение микроразметки JSON-LD.
-      .card-services__item
+      .card-services__item.card-services__item--dashed
         p.card-services__name SEO продвижение сайта
         p.card-services__description Технические работы с сайтом для увеличения органического трафика из поисковых систем Яндекс и Google. Используем только белые методы. Основные принципы: проработка семантического ядра и структуры сайта, генерация посадочных страниц.
 
+  <!-- Список вариаций: разные бордеры, разный цвет -->
 mixin CardServicesWhite
   +CardServicesCommon.card-services--white
 mixin CardServicesBlack
   +CardServicesCommon.card-services--black
 mixin CardServicesRed
   +CardServicesCommon.card-services--red
+
+mixin CardServicesDesign
+  .card-services.card-services--design
+    p.card-services__title Дизайн интерфейса - неотъемлемая часть создания сайта
+    .card-services__layout
+      .card-services__item.card-services__item--dashed
+        p.card-services__name Прототипирование
+        p.card-services__description На основе технического задания команда дизайнеров начинает первые шаги к рабочему интерфейсу - прототипирование блоков графического и текстового контента
+      .card-services__item.card-services__item--gradient
+        p.card-services__name Дизайн
+        p.card-services__description Выделяем этот этап создания сайта, так как наш подход отличается от многих других. В нем принимают активное участие seo-специалситы и контролируют семантичность и валидность верстки, адаптивность, внедрение микроразметки JSON-LD.
+      .card-services__item.card-services__item--solid.card-services__item--black
+        p.card-services__name Утверждение
+        p.card-services__description Технические работы с сайтом для увеличения органического трафика из поисковых систем Яндекс и Google. Используем только белые методы. Основные принципы: проработка семантического ядра и структуры сайта, генерация посадочных страниц.
+

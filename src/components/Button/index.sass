@@ -10,7 +10,7 @@
   border: 1px solid transparent
   border-radius: 100px
   outline: none
-
+  transition: all 0.3s ease-in
   .icon + .button__text
     margin-left: 16px
 
@@ -23,31 +23,32 @@
   &--black
     color: $pure-white
     background-color: $text_black
-    transition: background-color 0.2s ease-in
+
     &:hover
-      background-color: $red
+      background-color: $blue
       color: $pure-white
 
   &--gradient-1
     background: $gradient1
-    transition: background 0.3s ease-in-out
+
     &:hover
-      background: $gradient1reverse
+      background: $text_black
+      color: $pure_white
 
   &--gradient-2
     background: $gradient2
-    transition: background 0.3s ease-in-out
+
     &:hover
-      background: $gradient2reverse
+      background: $text_black
+      color: $pure_white
   &--gradient-3
     background: $gradient3
-    transition: background 0.3s ease-in-out
     &:hover
-      background: $gradient3reverse
+      background: $text_black
+      color: $pure_white
 
   &--outline
     border: 1px solid $border-grey-2
-    transition: background-color 0.2s ease-in-out
     &_black:hover
       background-color: $text_black
       color: $pure-white
@@ -67,11 +68,10 @@
     line-height: 1.25
     font-weight: 600
     &:hover
-      color: $red
       svg rect
         fill: none
       svg path
-        fill: $red
+        fill: $blue
 
   &--review
     //@include font(16, 20)

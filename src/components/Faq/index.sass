@@ -34,6 +34,12 @@
       height: 2rem
       margin-top: 2px
       margin-left: 24px
+      transform: rotate(0)
+      transition: transform 0.2s ease-in
+
+    .rotated > .icon
+      transform: rotate(90deg)
+
 
   &__item-head-content
     flex-grow: 1
@@ -47,7 +53,8 @@
     //@include font(24, 38)
     font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
     line-height: 1.4
-
+    transition: max-height  0.2s ease-in-out, opacity 0.2s 0.1s ease-in
+    opacity: 1
     *
       margin-bottom: 24px
 
@@ -60,3 +67,6 @@
       overflow: hidden
       max-height: 0
       padding: 0
+      *
+        opacity: 0
+

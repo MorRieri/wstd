@@ -5,11 +5,25 @@ var sliderType = new Swiper('.js-slider-type', {
   spaceBetween: 32,
   freeMode: true,
   slidesPerView: 'auto',
-  // Navigation arrows
+  observer: true,
+  watchOverflow: true,
   navigation: {
     nextEl: '.js-slider-type .slider-type__nav--next',
-    prevEl: '.js-slider-type .slider-type__nav--prev'
+    prevEl: '.js-slider-type .slider-type__nav--prev',
+    hiddenClass: ".hidden"
   }
+}); // sliderType.on('slideChange', function () {
+//   sliderType.navigation.nextEl.classList.remove('hidden');
+//   sliderType.navigation.prevEl.classList.remove('hidden');
+// });
+
+sliderType.on('reachEnd', function () {
+  sliderType.navigation.nextEl.classList.add('hidden');
+  sliderType.navigation.prevEl.classList.remove('hidden');
+});
+sliderType.on('reachBeginning', function () {
+  sliderType.navigation.prevEl.classList.add('hidden');
+  sliderType.navigation.nextEl.classList.remove('hidden');
 });
 var collapseButton = document.querySelectorAll('.js-collapse-button');
 collapseButton.forEach(function (item) {
@@ -17,6 +31,7 @@ collapseButton.forEach(function (item) {
   if (!parentCollapseButton) return;
   item.addEventListener('click', function (e) {
     e.preventDefault();
+    item.classList.toggle('rotated');
     parentCollapseButton.classList.toggle('hide-collapse');
   }, false);
 });
@@ -89,6 +104,7 @@ faqs.forEach(function (faq) {
   btns.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
+      btn.classList.toggle('rotated');
 
       if (isAccordion && isAccordion === 'accordion') {
         btns.forEach(function (b) {

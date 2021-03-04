@@ -7,13 +7,14 @@
     & .slider-card-type__box
       background-color: rgba($pure-white, 1)
       width: 100%
-      padding-top: 48px
+      padding-top: 32px
     & .slider-card-type__blur
       top: 0
     & .slider-card-type__button
       opacity: 1
       height: auto
-      margin-top: 16px
+      bottom: 20px
+
   @include desktop
     width: 190px
     height: 304px
@@ -43,7 +44,7 @@
     width: 100%
     padding-bottom: 100%
     z-index: 0
-
+    transition: top 0.3s ease-in-out
     @include desktop
       display: none
 
@@ -70,16 +71,21 @@
     border-radius: 0 0 20px 20px
     padding: 64px 24px 24px
     margin: -20px auto
-    transition: width 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    height: 180px
     @include desktop
       width: 100%
       padding: 16px 24px
       margin: 0
   &__button
+    position: absolute
+    bottom: -32px
+    left: 50%
+    transform: translateX(-50%)
     display: flex
     opacity: 0
     height: 0
-    transition: opacity 0.2s 0.1s ease-in
+    transition: all 0.3s linear
     justify-content: center
     align-items: center
     width: 100%
@@ -87,8 +93,13 @@
     & .button__text
       color: $blue
       font-weight: 600
-    & svg rect
-      fill: $blue
+      font-size: 16px
+    & svg
+      width: 20px
+      height: 20px
+      & rect
+        fill: $blue
+
   &__description
     font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - 768px) / (1920 - 768))), 16px)
     line-height: 1.4

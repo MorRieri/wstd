@@ -33,6 +33,7 @@
     line-height: 1.6
     font-weight: 500
     margin-bottom: 24px
+    color: rgba($text_black, 0.8)
 
   &__button-review
     position: relative
@@ -42,13 +43,14 @@
       svg path
         fill: $orange
       .card-product__button-review-content
-        display: flex
+        opacity: 1
+        transform: translateY(0)
 
 .card-product__image_mobile
   display: none
 
 .card-product__button-review-content
-  display: none
+  display: flex
   position: absolute
   z-index: 20
   top: 110%
@@ -61,6 +63,10 @@
   flex-direction: column
   justify-content: flex-start
   align-items: flex-start
+  opacity: 0
+  pointer-events: none
+  transition: all 0.3s ease-in-out
+  transform: translateY(-100px)
   p
     font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
     line-height: 1.6

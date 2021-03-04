@@ -3,16 +3,7 @@
   border-radius: 20px
   position: relative
   margin-bottom: 106px
-  &::before
-    content: ""
-    background: url("../img/elements/75.svg")
-    background-size: 100%
-    width: 6rem
-    height: 6rem
-    position: absolute
-    top: 0
-    left: 51px
-    transform: translateY(-55%)
+
   &__title
     //@include font(36, 44)
     font-size: clamp(24px, calc(24px + (36 - 24) * ((100vw - 768px) / (1920 - 768))), 36px)
@@ -27,9 +18,21 @@
 
   &__item
     padding: 32px 20px
-    border: 1px dashed transparent
     border-radius: 20px
+    &--gradient
+      background: linear-gradient(285.15deg, #FECDBD 12.33%, #DBF2AA 32.31%, #9CFF94 51.6%, #94CBFF 72.95%, #FF94B4 91.15%), #9B51E0
+      color: $pure-white
+      & > .card-services__description
+        font-family: Lobster
+        font-style: italic
 
+    &--solid
+      border: 1px solid transparent
+    &--dashed
+      border: 1px dashed rgba($pure_white, 0.6)
+    &--black
+      background-color: $pure_black
+      color: $pure_white
   &__name
     //@include font(26, 32)
     font-size: clamp(16px, calc(16px + (26 - 16) * ((100vw - 768px) / (1920 - 768))), 26px)
@@ -45,20 +48,66 @@
 
   &--white
     background-color: $pure_white
+    &::before
+      content: ""
+      background: url("../img/elements/75.svg")
+      background-size: 100%
+      width: 6rem
+      height: 6rem
+      position: absolute
+      top: 0
+      left: 51px
+      transform: translateY(-47%)
     .card-services__item
       border-color: $text_black
 
   &--black
     color: $pure_white
     background-color: $text_black
+    &::before
+      content: ""
+      background: url("../img/elements/cs_black.png")
+      background-size: 100%
+      width: 6rem
+      height: 6rem
+      position: absolute
+      top: 0
+      left: 51px
+      transform: translateY(-47%)
     .card-services__item
       border-color: $pure_white
 
   &--red
     color: $pure_white
-    background-color: $red
+    background: url('../img/bg/csbig_red.png'), $red
     .card-services__item
       border-color: $pure_white
+    &::before
+      content: ""
+      background: url("../img/elements/75.svg")
+      background-size: 100%
+      width: 6rem
+      height: 6rem
+      position: absolute
+      top: 0
+      left: 51px
+      transform: translateY(-47%)
+  &--design
+    background-color: $pure_white
+    border: 1px solid #18A0FB
+    &::before
+      content: ""
+      background: url("../img/elements/cs_design.png")
+      background-size: 100%
+      width: 6rem
+      height: 6rem
+      position: absolute
+      top: 0
+      left: 51px
+      transform: translateY(-47%)
+    .card-services__item.card-services__item--dashed
+      border-color: rgba(0,0,0, 0.6)
+
 
 @media (max-width: 992px)
   .card-services-layout,

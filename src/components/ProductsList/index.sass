@@ -6,9 +6,10 @@
   flex-direction: column
   justify-content: flex-start
   align-items: center
+  border-radius: 0 0 20px 20px
   &__sublist
     background-color: $pure-white
-    margin-top: -1px
+    margin: 16px 48px
     border-radius: 20px
 
     &.hide-collapse
@@ -27,13 +28,7 @@
     flex-direction: row
     justify-content: center
     align-items: center
-    background: linear-gradient(to right,#BDE7FE 10%, #94FFC5 50%, #F3F6F6 50%)
-    background-size: 200% 100%
-    background-position: bottom right
-    transition: background-position 0.3s ease-in
 
-    &:hover
-      background-position: bottom left
     &:last-child
       .card-product,
       .card-news
@@ -44,6 +39,14 @@
       border-radius: 20px
       .card-product
         padding-bottom: 56px
+      &:before
+        content: ""
+        border-bottom: 1px solid rgba(32, 33, 33, 0.1)
+        width: calc(100% - 96px)
+        right: 48px
+        position: absolute
+        bottom: 0
+
 
   &__button-collapse
     position: absolute
@@ -54,8 +57,27 @@
     .icon
       width: 20px
       height: 20px
+
+.products-list__button-collapse svg
+  transform: rotate(0)
+  transition: transform 0.2s ease-in
+.products-list__button-collapse.rotated
+  right: 39vw
+  & svg
+    transform: rotate(180deg)
+
+
+
+li.products-list__item
+  background: linear-gradient(to right,#BDE7FE 10%, #94FFC5 50%, #F3F6F6 50%)
+  background-size: 200% 100%
+  background-position: bottom right
+  transition: background-position 0.3s ease-in
+
+  &:hover
+    background-position: bottom left
 .products-list__sublist
-  .products-list__item
+  li.products-list__item
     background: linear-gradient(to right,#BDE7FE 10%, #94FFC5 50%, #ffffff 50%)
     background-size: 200% 100%
     background-position: bottom right
@@ -63,7 +85,10 @@
     &:hover
       background-position: bottom left
 
+
 @media (max-width: 992px)
   .products-list__item
     padding: 0 16px
     flex-direction: column
+  .products-list__sublist
+    margin: 0 16px

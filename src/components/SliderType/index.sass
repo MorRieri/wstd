@@ -21,6 +21,8 @@
     color: $pure-white
     cursor: pointer
     z-index: 1
+    &.hidden
+      visibility: hidden
 
     @include desktop
         top:  calc(50% - 18px)
@@ -49,3 +51,4 @@
 
       @include desktop
         right: -18px
+
