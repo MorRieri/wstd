@@ -7,5 +7,8 @@
 //=./VideoContent/index.js
 //=./Article/index.js
 //=./Case/case.js
+//=./Popup/popup.js
+//=./Form/index.js
+//=./Contacts/index.js
 
 

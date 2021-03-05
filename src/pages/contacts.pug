@@ -15,4 +15,7 @@ block content
           button.contacts__title.js-openForm Начать проект
         +CardNotificationGuest
         +SectionRowBottom(true).contacts__footer
-      .contacts__map
+      .contacts__map(id="map")
+
+block script
+  script(src="https://api-maps.yandex.ru/2.1/?apikey=4576eb7f-e69a-430e-9fcb-1d91f7fd66a3&lang=ru_RU&onload=init" type="text/javascript")

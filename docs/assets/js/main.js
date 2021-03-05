@@ -1,5 +1,28 @@
 "use strict";
 
+// $('.js-header__menu_mobile').on('click', function(e) {
+//   changeButton();
+//   e.stopPropagation();
+//   headerMenu();
+// });
+//
+// $('.header__row_mobile-menu .nav__link').on('click', function(e) {
+//   changeButton();
+//   headerMenu();
+// });
+//
+// function headerMenu() {
+//   $('html').toggleClass('noscroll');
+//   $('.header').removeClass('active');
+//   $('.js-headerNav').toggleClass('display');
+//   $('.js-headerMobileMenu').toggleClass('display');
+//   $('.js-headerMobileBottom').toggleClass('display');
+//   $('.js-headerTop').toggleClass('header__row_dark');
+// };
+// function changeButton() {
+//   $('#burger').toggleClass('hidden');
+//   $('#burgerClose').toggleClass('hidden');
+// };
 var sliderType = new Swiper('.js-slider-type', {
   loop: false,
   spaceBetween: 32,
@@ -154,4 +177,70 @@ var closeCase = document.querySelectorAll('.js-closeCase');
 
 closeCase.onclick = function () {
   document.getElementsByClassName('.case__wrapper').classList.remove("active");
-};
+}; // $(".js-openPopup").click(function (e) {
+//   e.stopPropagation();
+//   $("#popup").fadeToggle('fast');
+//   $('html').toggleClass('noscroll');
+// });
+//
+// $('.popup .form_confirmation').click(function (e) {
+//   e.stopPropagation();
+// });
+//
+// $('.popup .form').click(function (e) {
+//   e.stopPropagation();
+// });
+//
+// $('.popup .calendarPopUp').click(function (e) {
+//   e.stopPropagation();
+// });
+//
+// function closePopup() {
+//   $(".popup").fadeOut('fast');
+//   $('html').removeClass('noscroll');
+//   $('body').removeClass('noscroll');
+// };
+//
+// $(".js-closePopup").click(function (e) {
+//   e.preventDefault();
+//   closePopup();
+// });
+//
+// $('body').click(function () {
+//   closePopup();
+// });
+//
+// $('.js-submitButton').click(function (e) {
+//   if ($("#popup").display = "block") {
+//     $("#popup").fadeOut('fast');
+//   }
+//   ;
+//   $("#form_confirmation").fadeToggle('fast');
+//   $('html').toggleClass('noscroll');
+//   e.stopPropagation();
+//   e.preventDefault();
+// });
+
+
+$(".form__tel").mask("+7 (999) 999-99-99");
+/* Yandex Maps*/
+
+var myMap;
+
+function init() {
+  myMap = new ymaps.Map('map', {
+    center: [55.999017, 37.223832],
+    zoom: 16
+  }, {
+    searchControlProvider: 'yandex#search'
+  });
+  var myPlacemark = new ymaps.GeoObject({
+    geometry: {
+      type: "Point",
+      coordinates: [55.999017, 37.223832]
+    }
+  });
+  myMap.geoObjects.add(myPlacemark);
+}
+
+;
