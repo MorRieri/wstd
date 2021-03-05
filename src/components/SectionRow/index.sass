@@ -110,3 +110,114 @@
   &--bottom
     .section-row__inner
       max-height: 92px
+
+.section-row_mobile
+  display: none
+
+@media (max-width: 992px)
+  .section-row__nav
+    width: 100%
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+  .header
+    position: relative
+  .section-row_mobile
+    display: none
+    background: linear-gradient(90deg, #090809 0%, #292429 100%), #090809
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    height: 100vh
+    z-index: 30
+    & > .section-container_mobile, .section-row__nav
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      width: 100%
+      &
+        .section-row__nav-item:not(:last-child)
+          margin-right: 0
+          margin-bottom: 32px
+        .section-row__button-start
+          max-width: 288px
+          width: 100%
+          margin-top: 40px
+  .section-container_mobile
+    margin: 48px 16px
+  .section-row_mobile.active
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+  .header.black
+    background: linear-gradient(90deg, #090809 0%, #292429 100%), #090809
+    color: $pure-white
+    .section-row__logo
+      color: $pure-white
+    svg circle
+      fill: $pure-white
+    svg path
+      fill: transparent
+    .section-row__button-start
+      color: $pure_black
+      background-color: $pure-white
+    .section-row__menu
+      border-left: 1px solid rgba(229, 229, 229, 0.15)
+    .section-row__inner
+      border-bottom: 1px solid rgba(229, 229, 229, 0.15)
+
+@media (max-width: 580px)
+  .section-container_mobile > .section-row__contact,
+  .section-container_mobile > .section-row__contact span,
+  .section-container_mobile > .section-row__button-start
+    display: block
+    margin-left: 0
+    margin-right: 0
+
+  .section-row_mobile
+    height: calc(100vh - 65px)
+    padding-bottom: 6rem
+    overflow-y: scroll
+  .section-container_mobile
+    padding: 48px 0
+    margin: 0
+    border-bottom: 0.5px solid rgba(229, 229, 229, 0.15)
+    flex-shrink: 0
+    flex-grow: 0
+    .section-row__types
+      display: flex
+      flex-direction: column
+      width: 100%
+      padding: 0 16px
+      .header-types__nav
+        flex-direction: column
+        width: 100%
+        .header-types__nav-item
+          margin-right: 0
+          margin-top: 16px
+          width: 100%
+          font-size: 16px
+          &:not(.button--outline)
+            color: $pure-black
+        a
+          width: 100%
+      .header-types__name
+        font-size: 16px
+        margin-bottom: 24px
+    .section-row__button-start
+      width: 100%
+      max-width: 100%
+      span
+        font-weight: 500
+        font-size: 16px
+  .section-row__nav
+   padding-bottom: 24px
+  .section-row__contact
+    margin-left: 0
+    margin-top: 16px
+    span
+      font-weight: 500
+

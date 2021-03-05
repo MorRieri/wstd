@@ -1,31 +1,50 @@
 mixin SectionRowTop
   .section-row.section-row--top.section-row--border-bottom&attributes(attributes)
     .section-row__inner.container
-      button.section-row__menu
+      button.section-row__menu.js-openHeader
         .icon
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 18C5.10457 18 6 18.8954 6 20C6 21.1046 5.10457 22 4 22C2.89543 22 2 21.1046 2 20C2 18.8954 2.89543 18 4 18ZM12 18C13.1046 18 14 18.8954 14 20C14 21.1046 13.1046 22 12 22C10.8954 22 10 21.1046 10 20C10 18.8954 10.8954 18 12 18ZM20 18C21.1046 18 22 18.8954 22 20C22 21.1046 21.1046 22 20 22C18.8954 22 18 21.1046 18 20C18 18.8954 18.8954 18 20 18ZM4 10C5.10457 10 6 10.8954 6 12C6 13.1046 5.10457 14 4 14C2.89543 14 2 13.1046 2 12C2 10.8954 2.89543 10 4 10ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10ZM20 10C21.1046 10 22 10.8954 22 12C22 13.1046 21.1046 14 20 14C18.8954 14 18 13.1046 18 12C18 10.8954 18.8954 10 20 10ZM4 2C5.10457 2 6 2.89543 6 4C6 5.10457 5.10457 6 4 6C2.89543 6 2 5.10457 2 4C2 2.89543 2.89543 2 4 2ZM12 2C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2ZM20 2C21.1046 2 22 2.89543 22 4C22 5.10457 21.1046 6 20 6C18.8954 6 18 5.10457 18 4C18 2.89543 18.8954 2 20 2Z" fill="currentColor"/>
-          </svg>
+          |<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          |<defs><style>.cls-1{fill-rule:evenodd;}</style></defs>
+          |<g id="_2" data-name="2"><circle cx="2" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>
+          |<circle cx="10" cy="10" r="2"/><circle cx="2" cy="2" r="2"/><circle cx="18" cy="2" r="2"/></g>
+          |<g id="_1" data-name="1"><path class="cls-1" d="M12,18a2,2,0,1,1-2,2A2,2,0,0,1,12,18ZM4,10a2,2,0,1,1-2,2A2,2,0,0,1,4,10Zm16,0a2,2,0,1,1-2,2A2,2,0,0,1,20,10ZM12,2a2,2,0,1,1-2,2A2,2,0,0,1,12,2Z" transform="translate(-2 -2)"/></g></svg>
       a.not-link.section-row__logo(href="/") webster std
       nav.section-row__nav
         a.section-row__nav-item(href='/portfolio.html') Портфолио
         a.section-row__nav-item(href='/about.html') Студия
         a.section-row__nav-item(href='/journal.html') Журнал
         a.section-row__nav-item(href='/contacts.html') Контакты
-      a.section-row__contact
+      a.section-row__contact(href="tel:+74999640484")
         span +7 499 964-04-84
         <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="100%" height="100%" rx="50%" fill="currentColor"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0622 13H12C12.5523 13 13 12.5523 13 12V10C13 8.89543 12.1046 8 11 8H9C8.44772 8 8 8.44772 8 9C8 14.7683 13.2317 20 19 20C19.5523 20 20 19.5523 20 19V17C20 15.8954 19.1046 15 18 15H16C15.4477 15 15 15.4477 15 16V16.9378C13.4596 16.0974 12.1344 14.8159 11.2361 13.3052L11.0622 13Z" fill="white"/>
         </svg>
-      a.section-row__contact
+      a.section-row__contact(href="mailto:info@websterstd.com")
         span info@websterstd.com
         <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="100%" height="100%" rx="50%" fill="currentColor"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10.3L20 18C20 18.5128 19.614 18.9355 19.1166 18.9933L19 19H9C8.48716 19 8.06449 18.614 8.00673 18.1166L8 18L7.99999 10.3L13.3415 14.7526C13.7185 15.0825 14.2815 15.0825 14.6585 14.7526L20 10.3ZM18.433 9L14 12.6712L9.56599 9H18.433Z" fill="white"/>
         </svg>
-      a.not-link.button.button--black.button--rounded.section-row__button-start
-        span.button__text начать проект
+      button.not-link.button.button--black.button--rounded.section-row__button-start
+        span.button__text.js-openPopup начать проект
+  .section-row_mobile(id="header_mobile")
+    .section-container_mobile
+      nav.section-row__nav
+        a.section-row__nav-item(href='/portfolio.html') Портфолио
+        a.section-row__nav-item(href='/about.html') Студия
+        a.section-row__nav-item(href='/journal.html') Журнал
+        a.section-row__nav-item(href='/contacts.html') Контакты
+      a.section-row__contact(href="tel:+74999640484")
+        span +7 499 964-04-84
+      a.section-row__contact(href="mailto:info@websterstd.com")
+        span info@websterstd.com
+      button.not-link.button.button--black.button--rounded.section-row__button-start
+        span.button__text.js-openPopup начать проект
+    .section-container_mobile
+      +HeaderTypes_sites.section-row__types
+    .section-container_mobile
+      +HeaderTypes_services.section-row__types
 
 mixin SectionRowMiddle
   .section-row.section-row--middle.section-row--border-bottom&attributes(attributes)
@@ -40,3 +59,7 @@ mixin SectionRowBottom(notPolitic)
       if !notPolitic
         a.section-row__politic Политика конфиденциальности
       +Socials('true').section-row__socials
+
+
+
+

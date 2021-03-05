@@ -21,3 +21,12 @@
 //   $('#burger').toggleClass('hidden');
 //   $('#burgerClose').toggleClass('hidden');
 // };
+$(".js-openHeader").click(function(){
+  headerMenu()
+});
+
+function headerMenu() {
+  $('html').toggleClass('noscroll');
+  $('#header_mobile').toggleClass('active');
+  $('.header').toggleClass('black');
+};

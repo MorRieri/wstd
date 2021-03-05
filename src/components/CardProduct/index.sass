@@ -72,12 +72,12 @@
     line-height: 1.6
     font-weight: 400
     text-align: left
-    opacity: 0.8
+    color: rgba($pure_white, 0.8)
   span
     font-size: clamp(15px, calc(15px + (18 - 15) * ((100vw - 768px) / (1920 - 768))), 18px)
     line-height: 1.6
     font-weight: 600
-    opacity: 1
+    color: $pure-white
 
 .card-product__button-review-author
   display: flex
@@ -98,6 +98,7 @@
   align-items: flex-start
 .card-product__button-case
   display: none
+
 @media (max-width: 1440px)
   .card-product
     max-width: 100%
@@ -128,6 +129,8 @@
     opacity: 1
     height: auto
     font-size: 16px
+    position: static
+    transform: translateX(0)
     .button__text
       color: $text_black
     svg rect

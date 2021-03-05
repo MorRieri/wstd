@@ -4,6 +4,7 @@
   width: 100%
   position: relative
   margin: 0 auto
+  scroll-behavior: smooth
   &__close
     cursor: pointer
     position: fixed
@@ -29,7 +30,7 @@
     background: #474747
     padding-top: 122px
     overflow-y: scroll
-    & .active
+    &.active
       display: block
   &__nav-wrapper
     position: sticky
@@ -51,9 +52,10 @@
     width: 100%
     &-link
       font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 768px) / (1920 - 768))), 18px)
-      font-weight: 400
+      font-weight: 500
       color: rgba($text_black, 0.25)
-    &__link .active
+      margin-right: 2rem
+    &-link .active
       color: $text_black
       position: relative
       &::before
@@ -63,22 +65,40 @@
         background-color: #090809
         position: absolute
         bottom: -24px
+    &-list
+      display: flex
+      flex-direction: row
+      align-items: center
+      width: 100%
+      justify-content: flex-start
+      list-style: none
+    &-item
+
+    &-burger
+      margin-left: 24px
+      &:hover path
+        fill: $blue
   &__content
-    &__row
+    scroll-behavior: smooth
+    &-row
       display: grid
       grid-template-columns: 1fr 2fr
       grid-gap: 24px
+      scroll-margin-top: 100px
       &_wrapper
         padding: 4rem
       img
         width: 100%
         grid-column: span 2
-    &__col
+    &-col
       display: flex
       flex-direction: column
       justify-content: flex-start
       align-items: flex-start
-
+.case__head-row
+  display: grid
+  grid-template-columns: 1fr 2fr
+  grid-gap: 24px
 .case__maintitle
   font-weight: 600
   font-size: clamp(26px, calc(26px + (64 - 26) * ((100vw - 768px) / (1920 - 768))), 64px)
@@ -89,7 +109,7 @@
   color: rgba($text_black, 0.25)
 .case__text
   font-weight: 400
-  font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
+  font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 768px) / (1920 - 768))), 24px)
   line-height: 1.4
   color: #3F3F3F
 a.case__text
@@ -101,6 +121,61 @@ a.case__text
   font-weight: 600
   color: $text_black
 
-@media (max-width: 1420px)
-  .case__nav * + *
-    margin-left: 2rem
+.case__footer
+  cursor: pointer
+  h2
+    border-bottom: 1px dashed rgba(9, 8, 9, 0.25)
+
+  &:hover
+    *
+      color: $blue
+.case__separator
+  height: 1px
+  background-color: $text_black
+  grid-column: span 2
+
+@media (max-width: 992px)
+  .case
+    max-width: 100%
+  .case__nav-list
+    display: none
+    &.active
+      display: flex
+      background-color: $pure-white
+      position: absolute
+      width: 264px
+      top: 0
+      left: 0
+      overflow-y: scroll
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+      padding: 24px 16px
+      border-radius: 4px
+      box-shadow: 0 80px 60px rgba(0, 0, 0, 0.07), 10px 20px 6px rgba(0, 0, 0, 0.024)
+  .case__nav-item
+    padding: 8px 0
+  .case__nav-link
+    font-size: 15px
+  .case__head-col:first-child
+    order: 1
+  .case__nav-burger
+    margin-left: 0
+    margin-right: 24px
+
+@media (max-width: 580px)
+  .case__head-row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+  .case__nav-wrapper
+    padding: 16px
+  .case__content-row
+    grid-template-columns: 1fr
+    justify-content: start
+    align-items: start
+  .case__maintitle
+    margin-bottom: 1rem
+  .case__content-row_wrapper
+    padding: 24px 18px

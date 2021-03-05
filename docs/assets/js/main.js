@@ -23,6 +23,17 @@
 //   $('#burger').toggleClass('hidden');
 //   $('#burgerClose').toggleClass('hidden');
 // };
+$(".js-openHeader").click(function () {
+  headerMenu();
+});
+
+function headerMenu() {
+  $('html').toggleClass('noscroll');
+  $('#header_mobile').toggleClass('active');
+  $('.header').toggleClass('black');
+}
+
+;
 var sliderType = new Swiper('.js-slider-type', {
   loop: false,
   spaceBetween: 32,
@@ -165,63 +176,67 @@ videos.forEach(function (video) {
   });
   btns[0].click();
 });
-var openCase = document.querySelectorAll('.js-openCase');
+$('.js-openCase').click(function (e) {
+  e.stopPropagation();
+  $("#case").fadeToggle('fast');
+  $('html').toggleClass('noscroll');
+});
+$('.js-closeCase').click(function () {
+  closeCase();
+});
 
-openCase.onclick = function () {
-  var target = this.getAttribute('data-case');
-  console.log(target);
-  document.getElementById(target).classList.add("active");
-};
+function closeCase() {
+  $("#case").fadeOut('fast');
+  $('html').removeClass('noscroll');
+  $('body').removeClass('noscroll');
+}
 
-var closeCase = document.querySelectorAll('.js-closeCase');
+;
+$('.js-openNav').click(function (e) {
+  e.stopPropagation();
+  $(".case__nav-list").toggleClass('active');
+});
+$('.case__nav-link').click(function (e) {
+  e.stopPropagation();
+  $(".case__nav-list").toggleClass('active');
+});
+$(".js-openPopup").click(function (e) {
+  e.stopPropagation();
+  $("#popup").fadeToggle('fast');
+  $('html').toggleClass('noscroll');
+});
+$('.popup .form_confirmation').click(function (e) {
+  e.stopPropagation();
+});
+$('.popup .form').click(function (e) {
+  e.stopPropagation();
+});
 
-closeCase.onclick = function () {
-  document.getElementsByClassName('.case__wrapper').classList.remove("active");
-}; // $(".js-openPopup").click(function (e) {
-//   e.stopPropagation();
-//   $("#popup").fadeToggle('fast');
-//   $('html').toggleClass('noscroll');
-// });
-//
-// $('.popup .form_confirmation').click(function (e) {
-//   e.stopPropagation();
-// });
-//
-// $('.popup .form').click(function (e) {
-//   e.stopPropagation();
-// });
-//
-// $('.popup .calendarPopUp').click(function (e) {
-//   e.stopPropagation();
-// });
-//
-// function closePopup() {
-//   $(".popup").fadeOut('fast');
-//   $('html').removeClass('noscroll');
-//   $('body').removeClass('noscroll');
-// };
-//
-// $(".js-closePopup").click(function (e) {
-//   e.preventDefault();
-//   closePopup();
-// });
-//
-// $('body').click(function () {
-//   closePopup();
-// });
-//
-// $('.js-submitButton').click(function (e) {
-//   if ($("#popup").display = "block") {
-//     $("#popup").fadeOut('fast');
-//   }
-//   ;
-//   $("#form_confirmation").fadeToggle('fast');
-//   $('html').toggleClass('noscroll');
-//   e.stopPropagation();
-//   e.preventDefault();
-// });
+function closePopup() {
+  $(".popup").fadeOut('fast');
+  $('html').removeClass('noscroll');
+  $('body').removeClass('noscroll');
+}
 
+;
+$(".js-closePopup").click(function (e) {
+  e.preventDefault();
+  closePopup();
+});
+$('body').click(function () {
+  closePopup();
+});
+$('.js-submitButton').click(function (e) {
+  if ($("#popup").display = "block") {
+    $("#popup").fadeOut('fast');
+  }
 
+  ;
+  $("#form_confirmation").fadeToggle('fast');
+  $('html').toggleClass('noscroll');
+  e.stopPropagation();
+  e.preventDefault();
+});
 $(".form__tel").mask("+7 (999) 999-99-99");
 /* Yandex Maps*/
 
@@ -244,3 +259,6 @@ function init() {
 }
 
 ;
+$('.card-type__filter-item').click(function () {
+  $('.card-type__filter-list').css.display = "none";
+});

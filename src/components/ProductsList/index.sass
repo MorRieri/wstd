@@ -52,7 +52,7 @@
     position: absolute
     bottom: 0
     right: 48px
-    transform: translateY(50%)
+    transform: translate(0, 50%)
 
     .icon
       width: 20px
@@ -62,7 +62,7 @@
   transform: rotate(0)
   transition: transform 0.2s ease-in
 .products-list__button-collapse.rotated
-  right: 39vw
+  transform: translate(-40rem, 50%)
   & svg
     transform: rotate(180deg)
 
@@ -84,7 +84,13 @@ li.products-list__item
     transition: background-position 0.3s ease-in
     &:hover
       background-position: bottom left
+@media (max-width: 1280px)
+  .products-list__button-collapse.rotated
+    transform: translate(-36rem, 50%)
 
+@media (max-width: 1024px)
+  .products-list__button-collapse.rotated
+    transform: translate(-32vw, 50%)
 
 @media (max-width: 992px)
   .products-list__item
@@ -92,3 +98,12 @@ li.products-list__item
     flex-direction: column
   .products-list__sublist
     margin: 0 16px
+  .products-list__button-collapse.rotated
+    transform: translate(-36vw, 50%)
+
+
+@media (max-width: 580px)
+  .products-list__button-collapse
+    right: 0
+  .products-list__button-collapse.rotated
+    transform: translate(-50%, 50%)

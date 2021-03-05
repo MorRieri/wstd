@@ -10,5 +10,5 @@
 //=./Popup/popup.js
 //=./Form/index.js
 //=./Contacts/index.js
-
+//=./CardType/index.js
 

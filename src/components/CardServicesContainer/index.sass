@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr
   grid-gap: 32px
   padding: 4rem 4.5rem 0
+  place-items: center
   img
     width: 100%
     max-height: 384px
@@ -63,6 +64,17 @@
       left: 2.5rem
       top: 0
       transform: translateY(-49%)
+    &::after
+      content: ''
+      position: absolute
+      left: 48px
+      top: 0
+      width: 128px
+      height: 128px
+      clip-path: circle(128px at 0 0 )
+
+
+
 .card-services__subtitle
   font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 768px) / (1920 - 768))), 24px)
   line-height: 1.4
@@ -87,3 +99,6 @@
     width: 100%
     grid-template-columns: repeat(3, 350px)
 
+@media (max-width: 580px)
+  .card-services-container
+    grid-template-columns: repeat(3, 320px)

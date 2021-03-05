@@ -1,13 +1,25 @@
-let openCase = document.querySelectorAll('.js-openCase');
+$('.js-openCase').click(function (e) {
+  e.stopPropagation();
+  $("#case").fadeToggle('fast');
+  $('html').toggleClass('noscroll');
+});
 
-openCase.onclick = function () {
-  let target = this.getAttribute('data-case');
-  console.log(target);
-  document.getElementById(target).classList.add("active");
+$('.js-closeCase').click(function () {
+  closeCase();
+});
+
+function closeCase() {
+  $("#case").fadeOut('fast');
+  $('html').removeClass('noscroll');
+  $('body').removeClass('noscroll');
 };
 
-let closeCase = document.querySelectorAll('.js-closeCase');
+$('.js-openNav').click(function(e) {
+  e.stopPropagation();
+  $(".case__nav-list").toggleClass('active');
+});
 
-closeCase.onclick = function () {
-  document.getElementsByClassName('.case__wrapper').classList.remove("active");
-};
+$('.case__nav-link').click(function (e) {
+  e.stopPropagation();
+  $(".case__nav-list").toggleClass('active');
+});
