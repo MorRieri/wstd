@@ -7,7 +7,6 @@
   scroll-behavior: smooth
   &__close
     cursor: pointer
-    position: fixed
     right: 5%
     top: 122px
     width: 56px
@@ -76,6 +75,7 @@
 
     &-burger
       margin-left: 24px
+      display: none
       &:hover path
         fill: $blue
   &__content
@@ -86,8 +86,10 @@
       grid-gap: 24px
       scroll-margin-top: 100px
       &_wrapper
-        padding: 4rem
-      img
+        padding: 2rem 4rem
+      img,
+      picture,
+      figure
         width: 100%
         grid-column: span 2
     &-col
@@ -112,14 +114,23 @@
   font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 768px) / (1920 - 768))), 24px)
   line-height: 1.4
   color: #3F3F3F
+  margin: 24px 0
+  &.italic
+    font-style: italic
 a.case__text
   color: $blue
-  margin-top: 24px
+  margin: 24px 0
   font-weight: 500
-
+.case__list
+  list-style: circle outside $text_black
+  padding: 16px
+  li
+    padding: 4px 0
+    margin-left: 32px
 .case__title
   font-weight: 600
   color: $text_black
+  margin: 24px 0
 
 .case__footer
   cursor: pointer
@@ -129,10 +140,18 @@ a.case__text
   &:hover
     *
       color: $blue
+
 .case__separator
   height: 1px
   background-color: $text_black
   grid-column: span 2
+
+figcaption
+  font-size: 14px
+  font-style: italic
+  text-align: center
+figure
+  margin: 24px 0
 
 @media (max-width: 992px)
   .case
@@ -162,6 +181,7 @@ a.case__text
   .case__nav-burger
     margin-left: 0
     margin-right: 24px
+    display: flex
 
 @media (max-width: 580px)
   .case__head-row

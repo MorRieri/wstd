@@ -48,6 +48,9 @@
 
   &--outline
     border: 1px solid $border-grey-2
+    &:hover
+      background-color: $blue
+      color: $pure-white
     &_black:hover
       background-color: $text_black
       color: $pure-white
@@ -57,6 +60,25 @@
     &_blue:hover
       background-color: $blue
       color: $pure-white
+    &--medicine
+      border: 1px solid #BDE7FE
+      border-left-color:  #94FFC5
+      &:hover
+        border-color: $pure-black
+    &--rest
+      border: 1px solid #FFD6C0
+      border-right-color:  #F1BBFF
+      border-bottom-color:  #F1BBFF
+      &:hover
+        border-color: $pure-black
+    &--hotel
+      border: 1px solid #BBFFF3
+      border-right-color:  #F1BBFF
+      border-bottom-color:  #E3C0FF
+      border-left-color: #D7F0FF
+      &:hover
+        border-color: $pure-black
+
   &--outline-black
     border: 1px solid $text_black
 
@@ -67,6 +89,7 @@
     line-height: 1.25
     font-weight: 600
     &:hover
+      color: $blue
       svg rect
         fill: none
       svg path
@@ -100,7 +123,8 @@
     border: 1px dashed $text_black
     opacity: 0.35
     border-radius: 12px
-    &.active
+    &.active,
+    &:hover
       color: $pure-white
       background-color: $text_black
       opacity: 1
