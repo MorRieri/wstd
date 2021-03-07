@@ -56,8 +56,8 @@ body
   width: 100%
   max-width: 1920px
   margin: 0 auto
-  padding-left: 72px
-  padding-right: 72px
+  padding-left: 4.5rem
+  padding-right: 4.5rem
 
   @include screen_lg
     padding-left: 32px
@@ -152,7 +152,7 @@ body
 .card-advantage
   display: flex
   flex-direction: column
-  justify-content: space-between
+  justify-content: flex-start
   &__title
     //@include font(24, 38)
     font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
@@ -208,7 +208,8 @@ body
 .card-more-layout
   display: grid
   grid-gap: 2rem
-  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-template-columns: repeat(3, 1fr)
+  padding: 0 4.5rem
 @media (max-width: 1280px)
   .card-more-layout
     width: 100%

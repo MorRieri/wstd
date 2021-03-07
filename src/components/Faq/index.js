@@ -6,20 +6,19 @@ faqs.forEach(faq => {
 
   btns.forEach(btn => {
     btn.addEventListener('click', e => {
-      e.preventDefault()
-      btn.classList.toggle('rotated')
-
+      e.preventDefault();
+      btn.classList.toggle('rotated');
       if (isAccordion && isAccordion === 'accordion') {
         btns.forEach(b => {
           if (b === btn) {
-            b.nextElementSibling.classList.toggle('hide-faq')
+            b.nextElementSibling.classList.toggle('hide-faq');
           } else {
-            b.nextElementSibling.classList.add('hide-faq')
+            b.nextElementSibling.classList.add('hide-faq');
           }
         })
       } else {
-        btn.nextElementSibling.classList.toggle('hide-faq')
+        btn.nextElementSibling.classList.toggle('hide-faq');
       }
     })
   })
-})
+});

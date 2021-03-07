@@ -7,15 +7,17 @@
   scroll-behavior: smooth
   &__close
     cursor: pointer
-    right: 5%
-    top: 122px
-    width: 56px
-    height: 56px
+    width: 3.5rem
+    height: 3.5rem
     background-color: $blue
     color: $pure_white
     display: flex
     justify-content: center
     align-items: center
+    position: absolute
+    right: 1rem
+    top: 50%
+    transform: translateY(-50%)
     &:hover > svg path
       fill: $text_black
   &__wrapper
@@ -101,6 +103,9 @@
   display: grid
   grid-template-columns: 1fr 2fr
   grid-gap: 24px
+.case__head-col
+  display: flex
+  align-items: center
 .case__maintitle
   font-weight: 600
   font-size: clamp(26px, calc(26px + (64 - 26) * ((100vw - 768px) / (1920 - 768))), 64px)
@@ -147,7 +152,7 @@ a.case__text
   grid-column: span 2
 
 figcaption
-  font-size: 14px
+  font-size: 16px
   font-style: italic
   text-align: center
 figure

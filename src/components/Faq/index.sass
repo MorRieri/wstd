@@ -37,8 +37,8 @@
       transform: rotate(0)
       transition: transform 0.2s ease-in
 
-    .rotated > .icon
-      transform: rotate(90deg)
+  &__item-head.rotated > .icon
+    transform: rotate(45deg)
 
 
   &__item-head-content
@@ -53,10 +53,12 @@
     //@include font(24, 38)
     font-size: clamp(16px, calc(16px + (24 - 16) * ((100vw - 768px) / (1920 - 768))), 24px)
     line-height: 1.4
-    transition: max-height  0.2s ease-in-out, opacity 0.2s 0.1s ease-in
-    opacity: 1
+    transition: all 0.2s ease-in-out
+
     *
       margin-bottom: 24px
+      opacity: 1
+      transition: all 0.3s ease-in-out
 
     ul
       padding-left: 32px
@@ -69,4 +71,5 @@
       padding: 0
       *
         opacity: 0
+
 
