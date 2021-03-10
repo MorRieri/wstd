@@ -1,0 +1,50 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Студия"
+  - var pageClass = ''
+  - var activePage = 'about'
+
+block content
+  section.section
+    .container
+      +AboutCompany
+  section.section
+    +CardServicesContainer
+  section.section.section--default
+    .container
+      +TrustMedicine.wrapper.wrapper--padding
+
+  section.section.section--type-slider.section--default
+    .container
+      .slider-type-container
+        +CardTypeMainFilters
+        +SliderTypeMedicine
+  section.section.section--default.section--prices-key
+    .container
+      .wrapper.wrapper--padding
+        .section
+          +CooperationPrice
+  section.section.section--default
+    .container
+      .excellence.wrapper.wrapper--padding
+        .excellence__list
+          +ExcellenceBlockKey
+        img.excellence__image(src="./assets/img/excellent-test-key.png")
+
+  section.section.section--default
+    .card-more-layout
+      +CardMore
+      +CardMore
+      +CardMore
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Faq
+  section.section.section--clients
+    .container
+      +Clients
+  section.section.section--default
+    .container
+      .wrapper.wrapper--padding
+        +Form

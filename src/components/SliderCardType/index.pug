@@ -1,12 +1,13 @@
 mixin SliderCardType
-  a.not-link.slider-card-type(href="#")&attributes(attributes)
+  a.not-link.slider-card-type.js-openCase(href="#")&attributes(attributes)
     .slider-card-type__image
-      img(src="./assets/img/slider-card-test.jpg")
+      img(src="./assets/img/card-product-test.jpg")
     .slider-card-type__blur
       img(src="./assets/img/slider-card-test.jpg")
     .slider-card-type__box
-      p.slider-card-type__title Elite Denta
-      p.slider-card-type__description Создание сайта для стоматологической клиники
+      .slider-card-type__box-wrapper
+        p.slider-card-type__title Elite Denta
+        p.slider-card-type__description Создание сайта для стоматологической клиники
       button.button.slider-card-type__button.js-openCase
         span.button__text Кейс
         <svg class="icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">

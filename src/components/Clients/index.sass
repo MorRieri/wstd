@@ -8,8 +8,10 @@
     display: flex
     flex-direction: column
     align-items: flex-start
-    width: 420px
-    max-width: 100%
+    width: 100%
+    max-width: 27rem
+    flex-shrink: 0
+    margin-right: 12rem
 
   &__title
     //@include font(64, 78)
@@ -28,7 +30,7 @@
   &__grid
     list-style: none
     display: grid
-    grid-template-columns: 1fr 1fr 1fr
+    grid-template-columns: repeat(3, 1fr)
     grid-gap: 48px 32px
     padding: 32px
 
@@ -44,14 +46,12 @@
       margin: 0 auto
 
 @media (max-width: 992px)
-  .clients__grid
-    grid-gap: 32px
-
-@media (max-width: 580px)
   .clients
     flex-direction: column
     align-items: center
   .clients__box
+    max-width: 100%
+    margin-right: 0
     align-items: center
   .clients__description
     text-align: center

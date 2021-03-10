@@ -89,12 +89,14 @@
 
 .card-type__filter-wrapper
   width: 100%
-  cursor: pointer
   display: flex
   justify-content: space-between
   align-items: center
   margin-bottom: 32px
   position: relative
+
+.card-type__filter-button
+  cursor: pointer
   & svg
     transform: rotate(180deg)
     transition: transform 0.2s ease-in-out
@@ -106,7 +108,7 @@
       & path
         fill: $blue
     & > .card-type__filter-list
-      displaY: flex
+      display: flex
 .card-type__filter-list
   list-style: none
   position: absolute
@@ -131,10 +133,25 @@
     display: inline-block
     &:hover
       color: $blue
+
 @media (max-width: 767px)
   .card-type__filter-wrapper
     align-items: flex-start
+  .card-type__filter-button
+    & .icon
+      transform: rotate(180deg)
+      transition: transform 0.2s ease-in-out
+    & .icon.rotated
+      transform: rotate(0)
+      & path
+        fill: $blue
+  .card-type__title
+    &.blue
+     color: $blue
   .card-type__filter-list
     top: 4rem
     padding: 32px 24px
     border-radius: 4px
+    box-shadow: 0 80px 60px rgba(0, 0, 0, 0.07), 10px 20px 6px rgba(0, 0, 0, 0.024)
+    &.active
+      display: flex

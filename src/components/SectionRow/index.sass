@@ -62,7 +62,7 @@
 
     @include pseudo-after
       position: absolute
-      top: -20px
+      top: -23px
       right: 0
       display: inline-block
       width: 1px
@@ -115,13 +115,15 @@
   display: none
 
 @media (max-width: 992px)
-  .section-row__nav
-    width: 100%
-    flex-direction: column
-    justify-content: flex-start
-    align-items: center
-  .header
-    position: relative
+  header
+    .section-row__nav
+      width: 100%
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+    .icon
+      path
+        fill: $text-black
   .section-row_mobile
     display: none
     background: linear-gradient(90deg, #090809 0%, #292429 100%), #090809
@@ -157,15 +159,16 @@
     color: $pure-white
     .section-row__logo
       color: $pure-white
-    svg circle
-      fill: $pure-white
-    svg path
-      fill: transparent
+    .js-openHeader
+      svg circle
+        fill: $pure-white
+      svg path
+        fill: transparent
     .section-row__button-start
       color: $pure_black
       background-color: $pure-white
     .section-row__menu
-      border-left: 1px solid rgba(229, 229, 229, 0.15)
+      border-right: 1px solid rgba(229, 229, 229, 0.15)
     .section-row__inner
       border-bottom: 1px solid rgba(229, 229, 229, 0.15)
 
@@ -220,4 +223,20 @@
     margin-top: 16px
     span
       font-weight: 500
-
+  .header.black
+    background: linear-gradient(90deg, #090809 0%, #292429 100%), #090809
+    color: $pure-white
+    .section-row__logo
+      color: $pure-white
+    svg circle
+      fill: $pure-white
+    svg path
+      fill: transparent
+    .section-row__button-start
+      color: $pure_black
+      background-color: $pure-white
+    .section-row__menu
+      border-left: 1px solid rgba(229, 229, 229, 0.15)
+      border-right: none
+    .section-row__inner
+      border-bottom: 1px solid rgba(229, 229, 229, 0.15)

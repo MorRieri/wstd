@@ -1,5 +1,8 @@
 .header
-
+  position: sticky
+  top: -78px
+  background-color: $pure-white
+  z-index: 40
   @include screen
     .section-row__contact span
       display: none
@@ -55,3 +58,9 @@
       padding-left: 28px
       border-right: none
       border-left: 1px solid $border-grey
+
+@media (max-width: 992px)
+  .header
+    position: sticky
+    top: 0
+

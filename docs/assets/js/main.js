@@ -44,7 +44,7 @@ var sliderType = new Swiper('.js-slider-type', {
   navigation: {
     nextEl: '.js-slider-type .slider-type__nav--next',
     prevEl: '.js-slider-type .slider-type__nav--prev',
-    hiddenClass: ".hidden"
+    hiddenClass: "hidden"
   }
 }); // sliderType.on('slideChange', function () {
 //   sliderType.navigation.nextEl.classList.remove('hidden');
@@ -200,6 +200,36 @@ $('.case__nav-link').click(function (e) {
   e.stopPropagation();
   $(".case__nav-list").toggleClass('active');
 });
+$('body').click(function () {
+  $(".case__nav-list").removeClass('active');
+}); //Navigation
+
+var mainNavLinks = document.querySelectorAll(".article__aside-link");
+var mainSections = document.querySelectorAll(".article__section");
+var lastId;
+var cur = [];
+window.addEventListener("scroll", function (event) {
+  var fromTop = window.scrollY;
+  mainNavLinks.forEach(function (link) {
+    var section = document.querySelector(link.hash);
+
+    if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
+mainNavLinks.forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+    var target = document.querySelector(event.target.hash);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
 $(".js-openPopup").click(function (e) {
   e.stopPropagation();
   $("#popup").fadeToggle('fast');
@@ -259,6 +289,30 @@ function init() {
 }
 
 ;
-$('.card-type__filter-item').click(function () {
-  $('.card-type__filter-list').css.display = "none";
+
+if ($(window).width() < 767) {
+  $('.card-type__filter-button').click(function () {
+    $('.card-type__filter-list').toggleClass("active");
+    $('.card-type__filter-button .icon').toggleClass("rotated");
+    $('.card-type__title').toggleClass("blue");
+  });
+}
+
+var logo = document.getElementById('image_0'),
+    test = lottie.loadAnimation({
+  container: logo,
+  // Required
+  path: '../assets/js/Test2.json',
+  // Required
+  renderer: 'svg',
+  // Required
+  loop: false,
+  // Optional
+  autoplay: true,
+  // Optional
+  name: "logo" // Name for future reference. Optional.
+
+});
+$('.card-product__button-review').click(function (e) {
+  e.stopPropagation();
 });

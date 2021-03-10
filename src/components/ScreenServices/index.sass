@@ -6,29 +6,48 @@
     font-weight: 600
 
     span
-      padding: 0 16px 8px
-      border-radius: 20px
-      box-shadow: inset 0 0 13px $pure-white
-      white-space: nowrap
+      position: relative
+      padding: 8px 16px
+
+      &:before
+        content: ""
+        width: 100%
+        height: 84%
+        bottom: 0
+        left: 0
+        z-index: -1
+        position: absolute
+        border-radius: 20px
+        box-shadow: inset 0 0 13px $pure-white
+        white-space: nowrap
     &--medicine
-      span
+      span:before
         background: $gradient1
     &--rest
-      span
+      span:before
         background: $gradient2
     &--hotel
-      span
+      span:before
         background: $gradient3
     &--key
       span
+        color: $pure-white
+      span:before
         background: $text_black
-        color: $pure_white
     &--promotion
       span
-        background: $red
         color: $pure_white
+      span:before
+        background: $red
+
     &--360
       span
-        background: $blue
         color: $pure_white
+      span:before
+        background: $blue
+        height: 100%
 
+
+@media (max-width: 580px)
+  .screen-services__title
+    text-align: center

@@ -10,13 +10,20 @@
   &__image
     max-width: 100%
     width: 570px
-
+    position: relative
+    z-index: 2
     @include desktop
       margin: 0 auto 48px
 
     @include tablet
       margin: 0 auto 32px
-
+  &__image-bg
+    position: absolute
+    width: 570px
+    max-width: 100%
+    top: 0
+    left: 0
+    z-index: -1
   &__box
     margin-left: 64px
     width: 570px

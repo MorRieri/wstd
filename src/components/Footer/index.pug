@@ -6,7 +6,15 @@ mixin Footer
 
   .popup(id="popup")
     .popup__wrapper
-      .popup__close.js-closePopup <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.2204 17.2003L26.7818 9.63888C27.3404 9.08031 27.3404 8.17745 26.7818 7.61888C26.2233 7.06031 25.3204 7.06031 24.7618 7.61888L17.2004 15.1803L9.639 7.61888C9.08043 7.06031 8.17757 7.06031 7.619 7.61888C7.06043 8.17745 7.06043 9.08031 7.619 9.63888L15.1804 17.2003L7.619 24.7617C7.06043 25.3203 7.06043 26.2232 7.619 26.7817C7.89757 27.0603 8.26329 27.2003 8.629 27.2003C8.99471 27.2003 9.36043 27.0603 9.639 26.7817L17.2004 19.2203L24.7618 26.7817C25.0404 27.0603 25.4061 27.2003 25.7718 27.2003C26.1376 27.2003 26.5033 27.0603 26.7818 26.7817C27.3404 26.2232 27.3404 25.3203 26.7818 24.7617L19.2204 17.2003Z" fill="white"/></svg>
+      .popup__close.js-closePopup
+        p.button-close-text Начать проект
+        <svg class="button-close-desktop" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.2204 17.2003L26.7818 9.63888C27.3404 9.08031 27.3404 8.17745 26.7818 7.61888C26.2233 7.06031 25.3204 7.06031 24.7618 7.61888L17.2004 15.1803L9.639 7.61888C9.08043 7.06031 8.17757 7.06031 7.619 7.61888C7.06043 8.17745 7.06043 9.08031 7.619 9.63888L15.1804 17.2003L7.619 24.7617C7.06043 25.3203 7.06043 26.2232 7.619 26.7817C7.89757 27.0603 8.26329 27.2003 8.629 27.2003C8.99471 27.2003 9.36043 27.0603 9.639 26.7817L17.2004 19.2203L24.7618 26.7817C25.0404 27.0603 25.4061 27.2003 25.7718 27.2003C26.1376 27.2003 26.5033 27.0603 26.7818 26.7817C27.3404 26.2232 27.3404 25.3203 26.7818 24.7617L19.2204 17.2003Z" fill="white"/></svg>
+        <svg id="Слой_1" class="button-close-mobile" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <defs><style>.cls-1{fill-rule:evenodd;}</style></defs>
+          <g id="_2" data-name="2"><circle cx="2" cy="18" r="2"></circle><circle cx="18" cy="18" r="2"></circle>
+          <circle cx="10" cy="10" r="2"></circle><circle cx="2" cy="2" r="2"></circle><circle cx="18" cy="2" r="2"></circle></g>
+          <g id="_1" data-name="1"><path class="cls-1" d="M12,18a2,2,0,1,1-2,2A2,2,0,0,1,12,18ZM4,10a2,2,0,1,1-2,2A2,2,0,0,1,4,10Zm16,0a2,2,0,1,1-2,2A2,2,0,0,1,20,10ZM12,2a2,2,0,1,1-2,2A2,2,0,0,1,12,2Z" transform="translate(-2 -2)"></path></g></svg>
+
       +Form
 
   .case__wrapper(id="case")
@@ -32,278 +40,282 @@ mixin Footer
         .case__close.js-closeCase <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.2204 17.2003L26.7818 9.63888C27.3404 9.08031 27.3404 8.17745 26.7818 7.61888C26.2233 7.06031 25.3204 7.06031 24.7618 7.61888L17.2004 15.1803L9.639 7.61888C9.08043 7.06031 8.17757 7.06031 7.619 7.61888C7.06043 8.17745 7.06043 9.08031 7.619 9.63888L15.1804 17.2003L7.619 24.7617C7.06043 25.3203 7.06043 26.2232 7.619 26.7817C7.89757 27.0603 8.26329 27.2003 8.629 27.2003C8.99471 27.2003 9.36043 27.0603 9.639 26.7817L17.2004 19.2203L24.7618 26.7817C25.0404 27.0603 25.4061 27.2003 25.7718 27.2003C26.1376 27.2003 26.5033 27.0603 26.7818 26.7817C27.3404 26.2232 27.3404 25.3203 26.7818 24.7617L19.2204 17.2003Z" fill="white"/></svg>
 
       .case__content
-        .case__content-row.case__content-row_wrapper(id="aboutclient")
-          .case__content-col
-            span.case__maintitle.case__date 2020
-          .case__content-col
-            h2.case__maintitle  Mriya Resort & Spa
-            p.case__text Разработка сайта для крупнейшего курорта России Mriya Resort
-            a.case__text(href="#") mriya.ru
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-            h3.case__text.case__title О клиенте
-          .case__content-col
-            p.case__text Mriya Resort - один из ведущих premium-курортов Европы, находящийся в Крыму. На южном побережье Черного моря расположен пятизвездочный отель, медицинский центр, несколько ресторанов, пляжей и иных курортных объектов. Mriya Resort & SP – это крупнейший курорт России с более чем 100 реальными наградами международного стандарта.
-        .case__content-row
-          picture(alt="" loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/bg.png" )
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            h3.case__text.case__title Особенности бизнеса клиента
-            ul.case__list
-              li.case__text Огромная территория: более 60 га площади. Это целый городок со множеством объектов.
-              li.case__text Десятки активностей: рестораны, лаундж-зоны, пляжи, медицинский центр, детский парк и многое другое.
-              li.case__text Более 100 международных наград и оценка путешественников 4,5 из 5 на основе 6 тыс. проверенных отзывов.
+        .case__section(id="aboutclient")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+              span.case__maintitle.case__date 2020
+            .case__content-col
+              h2.case__maintitle  Mriya Resort & Spa
+              p.case__text Разработка сайта для крупнейшего курорта России Mriya Resort
+              a.case__text(href="#") mriya.ru
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+              h3.case__text.case__title О клиенте
+            .case__content-col
+              p.case__text Mriya Resort - один из ведущих premium-курортов Европы, находящийся в Крыму. На южном побережье Черного моря расположен пятизвездочный отель, медицинский центр, несколько ресторанов, пляжей и иных курортных объектов. Mriya Resort & SP – это крупнейший курорт России с более чем 100 реальными наградами международного стандарта.
+          .case__content-row
+            picture(alt="" loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/bg.png" )
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              h3.case__text.case__title Особенности бизнеса клиента
+              ul.case__list
+                li.case__text Огромная территория: более 60 га площади. Это целый городок со множеством объектов.
+                li.case__text Десятки активностей: рестораны, лаундж-зоны, пляжи, медицинский центр, детский парк и многое другое.
+                li.case__text Более 100 международных наград и оценка путешественников 4,5 из 5 на основе 6 тыс. проверенных отзывов.
 
-        .case__content-row.case__content-row_wrapper(id="history")
-          .case__content-col
-            h3.case__text.case__title Предыстория
-          .case__content-col
-            h3.case__text.case__title Знакомство с клиентом
-            p.case__text Мы нашли заказчика на тендерной площадке WorkSpace. Mriya Resort объявил конкурс, условием победы в котором считалась успешная реализация концепта главной страницы сайта. Мы сделали первый концепт:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/tender.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-            h3.case__text.case__title
-          .case__content-col
-            p.case__text Главный экран оформили в темных тонах, чтобы показать престиж и люксовость курорта. Форму бронирования вынесли в правую часть экрана, а слева прописали короткие УТП. Наш концепт мало чем отличался от актуальной версии главной страницы:
+        .case__section(id="history")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+              h3.case__text.case__title Предыстория
+            .case__content-col
+              h3.case__text.case__title Знакомство с клиентом
+              p.case__text Мы нашли заказчика на тендерной площадке WorkSpace. Mriya Resort объявил конкурс, условием победы в котором считалась успешная реализация концепта главной страницы сайта. Мы сделали первый концепт:
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/tender.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+              h3.case__text.case__title
+            .case__content-col
+              p.case__text Главный экран оформили в темных тонах, чтобы показать престиж и люксовость курорта. Форму бронирования вынесли в правую часть экрана, а слева прописали короткие УТП. Наш концепт мало чем отличался от актуальной версии главной страницы:
 
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/old_site.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Заказчик идею не оценил. В довесок, у представителей Mriya Resort были опасения, что наше агентство не справится с дизайном и не сможет грамотно передать атмосферу курорта. Но мы не сдавались. После небольшой паузы выкрали время заказчика и предложили второй концепт:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/concept1.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text На этот раз блок с формой оформления билетов расположили внизу, а с главного экрана убрали все лишнее. Остался только слоган, который мы незначительно переделали. Сама страница стала светлее: мы отказались от «премиальных» темных тонов в угоду привлекательности картинки.
-            p.case__text Заказчику второй концепт понравился, и мы попали в шорт-лист. Оставалось только ждать финала конкурса и назначения победителя. Но мы ждать не любим, а потому отошли от условий тендера и отрисовали еще один концепт – на этот раз страницы с номерами. Это важная часть всего сайта, где пользователи могут выбрать жилые пространства себе по вкусу.
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/concept2.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/old_site.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Заказчик идею не оценил. В довесок, у представителей Mriya Resort были опасения, что наше агентство не справится с дизайном и не сможет грамотно передать атмосферу курорта. Но мы не сдавались. После небольшой паузы выкрали время заказчика и предложили второй концепт:
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/concept1.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text На этот раз блок с формой оформления билетов расположили внизу, а с главного экрана убрали все лишнее. Остался только слоган, который мы незначительно переделали. Сама страница стала светлее: мы отказались от «премиальных» темных тонов в угоду привлекательности картинки.
+              p.case__text Заказчику второй концепт понравился, и мы попали в шорт-лист. Оставалось только ждать финала конкурса и назначения победителя. Но мы ждать не любим, а потому отошли от условий тендера и отрисовали еще один концепт – на этот раз страницы с номерами. Это важная часть всего сайта, где пользователи могут выбрать жилые пространства себе по вкусу.
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/concept2.png" alt="")
 
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Концепты заказчик оценил, но все еще сомневался в нашей готовности взяться за проект. Ранее с курортом работала крупная именитая студия, опыт с которой оказался неудачным. После некоторых раздумий клиент все же отдал предпочтение нашему агентству – как молодому, перспективному и заряженному на результат. Мы приступили к работе.
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            h3.case__text.case__title Погружение в работу
-            p.case__text.italic Не лучшее время для начала работ или великая сила Зума
-            p.case__text Mriya Resort – не просто большой отель. Он огромный, со множеством объектом, активностей и интересных особенностей. Сделать для такого проекта сайт – все равно что выстроить виртуальный город. Нам предстояло изучить курорт вдоль и поперек, исследовать каждый объект и погрузиться в инфраструктуру Mriya Resort. Но все планы сорвала пандемия. При всем желании мы не могли добраться из Москвы в Крым.
-            p.case__text Откладывать работу нельзя, поэтому мы нашли выход в видеоконференциях. Десятки часов клиент рассказывал нам об устройстве курорта, проводил виртуальные экскурсии, высылал документы и фотографии. Оказалось, что каждый объект на территории – это самостоятельная бизнес-единица со своими пожеланиями и требованиями. При этом сам сайт нужно было выдержать в единой стилистике.
-            p.case__text Заказчик возлагал большие надежды на сайт. Booking.com в Крыму не работает, а потому ключевым способом привлечения туристов остается собственное представительство в сети.
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/concept3.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Концепты заказчик оценил, но все еще сомневался в нашей готовности взяться за проект. Ранее с курортом работала крупная именитая студия, опыт с которой оказался неудачным. После некоторых раздумий клиент все же отдал предпочтение нашему агентству – как молодому, перспективному и заряженному на результат. Мы приступили к работе.
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              h3.case__text.case__title Погружение в работу
+              p.case__text.italic Не лучшее время для начала работ или великая сила Зума
+              p.case__text Mriya Resort – не просто большой отель. Он огромный, со множеством объектом, активностей и интересных особенностей. Сделать для такого проекта сайт – все равно что выстроить виртуальный город. Нам предстояло изучить курорт вдоль и поперек, исследовать каждый объект и погрузиться в инфраструктуру Mriya Resort. Но все планы сорвала пандемия. При всем желании мы не могли добраться из Москвы в Крым.
+              p.case__text Откладывать работу нельзя, поэтому мы нашли выход в видеоконференциях. Десятки часов клиент рассказывал нам об устройстве курорта, проводил виртуальные экскурсии, высылал документы и фотографии. Оказалось, что каждый объект на территории – это самостоятельная бизнес-единица со своими пожеланиями и требованиями. При этом сам сайт нужно было выдержать в единой стилистике.
+              p.case__text Заказчик возлагал большие надежды на сайт. Booking.com в Крыму не работает, а потому ключевым способом привлечения туристов остается собственное представительство в сети.
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/concept3.png" alt="")
 
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text.italic Ключевая задача на старте – придумать структуру сайта, понятную для посетителя и доступную для масштабирования в будущем.
-            p.case__text По завершении всех вводных конференций заказчик выкатил список пожеланий. Новый сайт должен отвечать следующим требованиям:
-            ul.case__list
-              li.case__text Сайт передаст посетителю атмосферу и богатство курорта, но одновременно не создаст ощущения чрезмерной премиальности и дороговизны. Курорт доступен для людей с достатком чуть выше среднего. Старый сайт отпугивает эту часть ЦА: люди думают, что отель слишком дорогой. Многие посетители не понимают, зачем платить в Крыму, когда за эти же деньги можно отдохнуть в Греции или Турции. Однако на других курортах нет той инфраструктуры, которую предоставляет Mriya. Все это нужно донести до ЦА с помощью нового сайта.
-              li.case__text Сайт понятный и приятный внешне. Для этого придется удалить некоторые блоки, изменить навигацию, проработать стилистику и провести ряд иных работ.
-              li.case__text Новый сайт обеспечит заказчику удобное администрирование контента и масштабирование проекта. Клиент должен сам управлять блоками с контентом, добавлять новости, акции и т.д. На момент знакомства с заказчиком административная часть сайта была сложной для восприятия. Прошлый же подрядчик подолгу не обновлял данные на сайте, когда того просил клиент.
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text.italic Ключевая задача на старте – придумать структуру сайта, понятную для посетителя и доступную для масштабирования в будущем.
+              p.case__text По завершении всех вводных конференций заказчик выкатил список пожеланий. Новый сайт должен отвечать следующим требованиям:
+              ul.case__list
+                li.case__text Сайт передаст посетителю атмосферу и богатство курорта, но одновременно не создаст ощущения чрезмерной премиальности и дороговизны. Курорт доступен для людей с достатком чуть выше среднего. Старый сайт отпугивает эту часть ЦА: люди думают, что отель слишком дорогой. Многие посетители не понимают, зачем платить в Крыму, когда за эти же деньги можно отдохнуть в Греции или Турции. Однако на других курортах нет той инфраструктуры, которую предоставляет Mriya. Все это нужно донести до ЦА с помощью нового сайта.
+                li.case__text Сайт понятный и приятный внешне. Для этого придется удалить некоторые блоки, изменить навигацию, проработать стилистику и провести ряд иных работ.
+                li.case__text Новый сайт обеспечит заказчику удобное администрирование контента и масштабирование проекта. Клиент должен сам управлять блоками с контентом, добавлять новости, акции и т.д. На момент знакомства с заказчиком административная часть сайта была сложной для восприятия. Прошлый же подрядчик подолгу не обновлял данные на сайте, когда того просил клиент.
 
-        .case__content-row.case__content-row_wrapper(id="dev")
-          .case__content-col
-            h3.case__text.case__title Этапы поиска и реализации решения
-          .case__content-col
-            h3.case__text.case__title Изучили ЦА клиента
-            p.case__text ЦА курорта — люди с достатком чуть выше среднего, а также с супервысоким уровнем заработка. Часто это невыездные чины - военные и люди и государственных структур. Большая часть аудитории курорта – семьи.
+        .case__section(id="dev")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+              h3.case__text.case__title Этапы поиска и реализации решения
+            .case__content-col
+              h3.case__text.case__title Изучили ЦА клиента
+              p.case__text ЦА курорта — люди с достатком чуть выше среднего, а также с супервысоким уровнем заработка. Часто это невыездные чины - военные и люди и государственных структур. Большая часть аудитории курорта – семьи.
+              figure
+                img(src="../assets/img/case/mriya/clients.png" alt="")
+                figcaption Портрет аудитории
+              p.case__text Заказчик хотел показать, что в Mriya Resort могут отдыхать не только богатые люди. От этой идеи мы и отталкивались при составлении концептов дизайна. Но сначала нужно было разобраться с технической частью работы.
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              h3.case__text.case__title Поиск движка
+              p.case__text От технической «начинки» сайта зависело не меньше, чем от нового дизайна. Главная сложность разработки крылась в том, что у нас был конкурент: старый сайт Mriya Resort. На него ежедневно поступал трафик в больших объемах, и наш новый сайт должен был отрабатывать как минимум на том же уровне. Решим мы проблему или нет – зависело от того, какой движок выберем, как его настроим, какие интеграции выполним и т.д.
+              figure
+                img(src="../assets/img/case/mriya/mainpage_old.png" alt="")
+                figcaption Главная страница на старом сайте
+              p.case__text Старый сайт был выполнен на самописной CMS. Проблема самописных движков в том, что они слишком привязаны к разработчикам. Внести какие-то изменения человеку, не связанному с разработкой, практически невозможно: все редактируется через сотни строчек кода
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Мы провели небольшой аудит старого сайта и выявили следующие проблемы:
+              ul.case__list
+                li.case__text Продолжительная загрузка сайта. Это негативно сказывается на поведении посетителей, растет число отказов (так называют закрытие вкладки с сайтом в первые секунды загрузки).
+                li.case__text Много мусорного кода: некоторые страницы на сайте выглядели криво и странно. Шрифты не подгружались и на разных страницах выглядели по-разному, иконки съезжали и т.д.
+                li.case__text Удобная административная панель для заказчика просто отсутствовала.
+              p.case__text Когда заказчик решился на новый сайт, его выбор пал на CMS Битрикс. У нас на этот счет было другое мнение. Битрикс не очень подходит для сборки страниц из блоков. Поэтому мы разработали свое решение для Битрикс, с помощью которого можно было использовать блоки и модули.
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/solution1.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Мы использовали блочную систему для удобства пользователя. Чем чаще человек переходит с одной страницы на другую, тем больше рискует запутаться и потеряться. Из-за этого посетитель забывает что хотел, либо так и не находит цель (как вариант – оформление билетов или поиск контактов). Блоки же позволяют человеку получать информацию в рамках одной страницы. Есть объект и ссылка на контент, и есть сам контент, который в нашем случае подтягивается в правой части страницы:
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/solution2.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Почти весь сайт выполнен в таком формате:
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/solution3.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Комплекс работ касался разработки опосредовано
+              ul.case__list
+                li.case__text Интегрировали сайт с системами сторонней аналитики Яндекс.Метркиа и Roistat, чтобы иметь представление о ключевых показателях эффективности.
+                li.case__text Внедрили сложные системы безопасности и привели сервера сайта под все стандарты защиты.
+                li.case__text Интегрировали сайт с сервисом почтовых рассылок.
+                li.case__text По ходу разработки оптимизировали новый сайт под поисковое продвижение: расставили метатеги, собрали семантику, заполнили robots.txt и sitemap, удалили дубли страниц и настроили редиректы.
+              p.case__text Особое внимание уделили системе администрирования. Максимально упростили панель управления Битрикс, чтобы заказчик самостоятельно управлял контентом на сайте. Дополнительно интегрировали сайт с CRM Битркис24. С ее помощью специалисты могут работать с формами, заявками и контентом без знаний кода.
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              h3.case__text.case__title Поиск идеального дизайна
+              p.case__text Работу с дизайном начали с поиска фирменных цветов. При выборе оттенков ориентировались на исследование по ЦА курорта. В основном это богатые люди, но заказчик уповал на людей с достатком чуть выше среднего. Чтобы избавиться от лишней премиальности, мы выбрали светлые тона. Они не создают ощущение дороговизны и недоступности, а следовательно – не снижают конверсию.
+              img(src="../assets/img/case/mriya/colors.png" alt="")
+              p.case__text Шрифты выбрали простые, без засечек. Их приятнее читать, они также не вызывают ощущения премиальности. В довесок такой шрифт не отвлекает от визуальной составляющей сайта – изображений и роликов с курортом.
+              img(src="../assets/img/case/mriya/fonts.png" alt="")
+              p.case__text На главной странице отказались от лишних элементов. Убрали все тексты, кроме слогана, а на фон поместили ролик с демонстрацией жизни на курорте. Отказались и от картинок с наградами: они лишний раз намекают о премиальности объекта.
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/main_new.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text В итоге, мы стремились создать понятный с точки зрения навигации и продающий сайт для ЦА курорта — люди с доходом чуть выше среднего и высоким уровнем.
+              p.case__text Выстроили структуру сайта в виде прототипа:
+          .case__content-row.case__content-row_wrapper
             figure
-              img(src="../assets/img/case/mriya/clients.png" alt="")
-              figcaption Портрет аудитории
-            p.case__text Заказчик хотел показать, что в Mriya Resort могут отдыхать не только богатые люди. От этой идеи мы и отталкивались при составлении концептов дизайна. Но сначала нужно было разобраться с технической частью работы.
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            h3.case__text.case__title Поиск движка
-            p.case__text От технической «начинки» сайта зависело не меньше, чем от нового дизайна. Главная сложность разработки крылась в том, что у нас был конкурент: старый сайт Mriya Resort. На него ежедневно поступал трафик в больших объемах, и наш новый сайт должен был отрабатывать как минимум на том же уровне. Решим мы проблему или нет – зависело от того, какой движок выберем, как его настроим, какие интеграции выполним и т.д.
+              img(src="../assets/img/case/mriya/schema.png" alt="")
+              figcaption Отрывок схемы сайта
+          .case__content-row.case__content-row_wrapper
             figure
-              img(src="../assets/img/case/mriya/mainpage_old.png" alt="")
-              figcaption Главная страница на старом сайте
-            p.case__text Старый сайт был выполнен на самописной CMS. Проблема самописных движков в том, что они слишком привязаны к разработчикам. Внести какие-то изменения человеку, не связанному с разработкой, практически невозможно: все редактируется через сотни строчек кода
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Мы провели небольшой аудит старого сайта и выявили следующие проблемы:
-            ul.case__list
-              li.case__text Продолжительная загрузка сайта. Это негативно сказывается на поведении посетителей, растет число отказов (так называют закрытие вкладки с сайтом в первые секунды загрузки).
-              li.case__text Много мусорного кода: некоторые страницы на сайте выглядели криво и странно. Шрифты не подгружались и на разных страницах выглядели по-разному, иконки съезжали и т.д.
-              li.case__text Удобная административная панель для заказчика просто отсутствовала.
-            p.case__text Когда заказчик решился на новый сайт, его выбор пал на CMS Битрикс. У нас на этот счет было другое мнение. Битрикс не очень подходит для сборки страниц из блоков. Поэтому мы разработали свое решение для Битрикс, с помощью которого можно было использовать блоки и модули.
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/solution1.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Мы использовали блочную систему для удобства пользователя. Чем чаще человек переходит с одной страницы на другую, тем больше рискует запутаться и потеряться. Из-за этого посетитель забывает что хотел, либо так и не находит цель (как вариант – оформление билетов или поиск контактов). Блоки же позволяют человеку получать информацию в рамках одной страницы. Есть объект и ссылка на контент, и есть сам контент, который в нашем случае подтягивается в правой части страницы:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/solution2.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Почти весь сайт выполнен в таком формате:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/solution3.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Комплекс работ касался разработки опосредовано
-            ul.case__list
-              li.case__text Интегрировали сайт с системами сторонней аналитики Яндекс.Метркиа и Roistat, чтобы иметь представление о ключевых показателях эффективности.
-              li.case__text Внедрили сложные системы безопасности и привели сервера сайта под все стандарты защиты.
-              li.case__text Интегрировали сайт с сервисом почтовых рассылок.
-              li.case__text По ходу разработки оптимизировали новый сайт под поисковое продвижение: расставили метатеги, собрали семантику, заполнили robots.txt и sitemap, удалили дубли страниц и настроили редиректы.
-            p.case__text Особое внимание уделили системе администрирования. Максимально упростили панель управления Битрикс, чтобы заказчик самостоятельно управлял контентом на сайте. Дополнительно интегрировали сайт с CRM Битркис24. С ее помощью специалисты могут работать с формами, заявками и контентом без знаний кода.
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            h3.case__text.case__title Поиск идеального дизайна
-            p.case__text Работу с дизайном начали с поиска фирменных цветов. При выборе оттенков ориентировались на исследование по ЦА курорта. В основном это богатые люди, но заказчик уповал на людей с достатком чуть выше среднего. Чтобы избавиться от лишней премиальности, мы выбрали светлые тона. Они не создают ощущение дороговизны и недоступности, а следовательно – не снижают конверсию.
-            img(src="../assets/img/case/mriya/colors.png" alt="")
-            p.case__text Шрифты выбрали простые, без засечек. Их приятнее читать, они также не вызывают ощущения премиальности. В довесок такой шрифт не отвлекает от визуальной составляющей сайта – изображений и роликов с курортом.
-            img(src="../assets/img/case/mriya/fonts.png" alt="")
-            p.case__text На главной странице отказались от лишних элементов. Убрали все тексты, кроме слогана, а на фон поместили ролик с демонстрацией жизни на курорте. Отказались и от картинок с наградами: они лишний раз намекают о премиальности объекта.
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/main_new.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text В итоге, мы стремились создать понятный с точки зрения навигации и продающий сайт для ЦА курорта — люди с доходом чуть выше среднего и высоким уровнем.
-            p.case__text Выстроили структуру сайта в виде прототипа:
-        .case__content-row.case__content-row_wrapper
-          figure
-            img(src="../assets/img/case/mriya/schema.png" alt="")
-            figcaption Отрывок схемы сайта
-        .case__content-row.case__content-row_wrapper
-          figure
+              picture(loading="lazy")
+                source(srcset="" media="max-width: 992px")
+                img(srcset="../assets/img/case/mriya/prototype.png" alt="")
+              figcaption Прототип главной страницы
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Всего получили 13 основных разделов:
+              ul.case__list
+                li.case__text Услуги
+                li.case__text Размещение в номерах
+                li.case__text Аренда площадок для мероприятий
+                li.case__text Блог
+                li.case__text Акции
+                li.case__text Локации
+                li.case__text Карта
+                li.case__text Типы отдыха
+                li.case__text Трансфер
+                li.case__text Афиша
+                li.case__text О нас
+                li.case__text Контакты
+                li.case__text Брнирование
+              p.case__text Это идеальное количество страниц, которые вмещают абсолютно все возможности для изучения курорта на сайте. Но как расположить 13 блоков в меню? 5 самых важных блоков расположили в шапке:
+          .case__content-row.case__content-row_wrapper
             picture(loading="lazy")
               source(srcset="" media="max-width: 992px")
-              img(srcset="../assets/img/case/mriya/prototype.png" alt="")
-            figcaption Прототип главной страницы
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Всего получили 13 основных разделов:
-            ul.case__list
-              li.case__text Услуги
-              li.case__text Размещение в номерах
-              li.case__text Аренда площадок для мероприятий
-              li.case__text Блог
-              li.case__text Акции
-              li.case__text Локации
-              li.case__text Карта
-              li.case__text Типы отдыха
-              li.case__text Трансфер
-              li.case__text Афиша
-              li.case__text О нас
-              li.case__text Контакты
-              li.case__text Брнирование
-            p.case__text Это идеальное количество страниц, которые вмещают абсолютно все возможности для изучения курорта на сайте. Но как расположить 13 блоков в меню? 5 самых важных блоков расположили в шапке:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/header.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Остальные кнопки доступны по клику на значок «бутерброда». Открывается выпадающее меню, где каждый раздел имеет свой подраздел:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/menu.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Мы опасались, что такое меню будет выглядеть перегруженным запутает пользователя. Но соблюсти баланс все же получилось. Каждая из 9 первых кнопок – достаточно крупная, а в подразделах по 3-7 блоков. Пользователь не запутается и быстро найдет необходимую информацию. Для сравнения, меню старого сайта выглядело так:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/menu_old.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Любая страница сайта встречает пользователя ярким полноразмерным изображением:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/hero.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Здесь все еще минимум информации – только название услуги и кнопка. Текст вынесли ниже:
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/hero_after.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Переработали страницу бронирования. Форму сделали проще, убрали лишние строки.
-        .case__content-row.case__content-row_wrapper
-          picture(loading="lazy")
-            source(srcset="" media="max-width: 992px")
-            img(srcset="../assets/img/case/mriya/form_new.png" alt="")
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text На старом сайте форма была с картинкой, из-за чего не сразу подгружалась. Это большое упущение, поскольку часть потенциальных клиентов успеют покинуть страницу, ничего не найдя:
-        .case__content-row.case__content-row_wrapper
-          figure
+              img(srcset="../assets/img/case/mriya/header.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Остальные кнопки доступны по клику на значок «бутерброда». Открывается выпадающее меню, где каждый раздел имеет свой подраздел:
+          .case__content-row.case__content-row_wrapper
             picture(loading="lazy")
               source(srcset="" media="max-width: 992px")
-              img(srcset="../assets/img/case/mriya/form_old.png" alt="")
-            figcaption Старый тип формы
-        .case__content-row.case__content-row_wrapper
-          figure
+              img(srcset="../assets/img/case/mriya/menu.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Мы опасались, что такое меню будет выглядеть перегруженным запутает пользователя. Но соблюсти баланс все же получилось. Каждая из 9 первых кнопок – достаточно крупная, а в подразделах по 3-7 блоков. Пользователь не запутается и быстро найдет необходимую информацию. Для сравнения, меню старого сайта выглядело так:
+          .case__content-row.case__content-row_wrapper
             picture(loading="lazy")
               source(srcset="" media="max-width: 992px")
-              img(srcset="../assets/img/case/mriya/form_old1.png" alt="")
-            figcaption Старая форма не сразу подгружается
-        .case__content-row.case__content-row_wrapper
-          .case__content-col
-          .case__content-col
-            p.case__text Мы сделали быстрый, удобный и доступный для каждого сайт, который привлекает все сегменты ЦА и в яркой манере демонстрирует основные прелести курорта Mriya Resort.
-        .case__content-row.case__content-row_wrapper(id="final")
-          .case__content-col
-            h3.case__text.case__title Результаты
-          .case__content-col
-            p.case__text Для нас это был интересный и ответственный проект. Заказчик удовлетворил все свои требования и получил даже больше: по ходу работы мы постоянно продвигали и реализовывали идеи, как с помощью сайта улучшить взаимодействие с ЦА.
+              img(srcset="../assets/img/case/mriya/menu_old.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Любая страница сайта встречает пользователя ярким полноразмерным изображением:
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/hero.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Здесь все еще минимум информации – только название услуги и кнопка. Текст вынесли ниже:
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/hero_after.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Переработали страницу бронирования. Форму сделали проще, убрали лишние строки.
+          .case__content-row.case__content-row_wrapper
+            picture(loading="lazy")
+              source(srcset="" media="max-width: 992px")
+              img(srcset="../assets/img/case/mriya/form_new.png" alt="")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text На старом сайте форма была с картинкой, из-за чего не сразу подгружалась. Это большое упущение, поскольку часть потенциальных клиентов успеют покинуть страницу, ничего не найдя:
+          .case__content-row.case__content-row_wrapper
+            figure
+              picture(loading="lazy")
+                source(srcset="" media="max-width: 992px")
+                img(srcset="../assets/img/case/mriya/form_old.png" alt="")
+              figcaption Старый тип формы
+          .case__content-row.case__content-row_wrapper
+            figure
+              picture(loading="lazy")
+                source(srcset="" media="max-width: 992px")
+                img(srcset="../assets/img/case/mriya/form_old1.png" alt="")
+              figcaption Старая форма не сразу подгружается
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+            .case__content-col
+              p.case__text Мы сделали быстрый, удобный и доступный для каждого сайт, который привлекает все сегменты ЦА и в яркой манере демонстрирует основные прелести курорта Mriya Resort.
+        .case__section(id="final")
+          .case__content-row.case__content-row_wrapper
+            .case__content-col
+              h3.case__text.case__title Результаты
+            .case__content-col
+              p.case__text Для нас это был интересный и ответственный проект. Заказчик удовлетворил все свои требования и получил даже больше: по ходу работы мы постоянно продвигали и реализовывали идеи, как с помощью сайта улучшить взаимодействие с ЦА.
 
-        .case__content-row.case__content-row_wrapper
-          .case__separator
+          .case__content-row.case__content-row_wrapper
+            .case__separator
 
-        a.case__content-row.case__content-row_wrapper.case__footer(href="#")
-          .case__content-col
-            h3.case__text.case__title Следующий проект
-          .case__content-col
-            h2.case__maintitle Mriya Resort&Spa
-            p.case__text Петровский Путевой Дворец - историческое сооружение, последний дворец на въезд в Москву из Петербурга. Дворец строился по приказу Екатерины II в связи с окончанием Русско-турецкой войны. Дворец имел стратегическое назначение, в нем останавливались императоры перед коронацией. Сегодня Петровский Путевой Дворец - это дом приемов правительства Москвы и отель.
+          a.case__content-row.case__content-row_wrapper.case__footer(href="#")
+            .case__content-col
+              h3.case__text.case__title Следующий проект
+            .case__content-col
+              h2.case__maintitle Mriya Resort&Spa
+              p.case__text Петровский Путевой Дворец - историческое сооружение, последний дворец на въезд в Москву из Петербурга. Дворец строился по приказу Екатерины II в связи с окончанием Русско-турецкой войны. Дворец имел стратегическое назначение, в нем останавливались императоры перед коронацией. Сегодня Петровский Путевой Дворец - это дом приемов правительства Москвы и отель.
 

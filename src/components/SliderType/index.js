@@ -9,7 +9,7 @@ const sliderType = new Swiper('.js-slider-type', {
   navigation: {
     nextEl: '.js-slider-type .slider-type__nav--next',
     prevEl: '.js-slider-type .slider-type__nav--prev',
-    hiddenClass: ".hidden",
+    hiddenClass: "hidden",
   },
 });
 

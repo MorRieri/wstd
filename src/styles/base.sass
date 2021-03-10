@@ -79,7 +79,7 @@ body
   display: flex
   flex-direction: column
   min-height: 100vh
-  overflow: hidden
+  position: relative
 
   main
     flex-grow: 1
@@ -148,6 +148,9 @@ body
     line-height: 1.2
     font-weight: 600
     margin-bottom: 56px
+@media (max-width: 580px)
+  .services-page__title
+    padding: 0 16px
 
 .card-advantage
   display: flex

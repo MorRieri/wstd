@@ -81,6 +81,10 @@
 
   &--outline-black
     border: 1px solid $text_black
+    &:hover
+      background-color: $blue
+      color: $pure-white
+      border-color: $blue
 
   &--more
     padding: 12px 0
@@ -128,3 +132,15 @@
       color: $pure-white
       background-color: $text_black
       opacity: 1
+@media (max-width: 992px)
+  .button--gradient-1,
+  .button--gradient-2,
+  .button--gradient-3
+    &:hover
+      background-color: $pure-white
+    .button__text
+      color:  $text_black
+  header.section-row__contact
+    svg
+      path
+        fill: $text_black

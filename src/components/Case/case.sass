@@ -23,7 +23,7 @@
   &__wrapper
     display: none
     position: fixed
-    z-index: 30
+    z-index: 50
     left: 0
     top: 0
     width: 100%
@@ -56,7 +56,7 @@
       font-weight: 500
       color: rgba($text_black, 0.25)
       margin-right: 2rem
-    &-link .active
+    &-link.active
       color: $text_black
       position: relative
       &::before
@@ -65,7 +65,7 @@
         height: 2px
         background-color: #090809
         position: absolute
-        bottom: -24px
+        bottom: -25px
     &-list
       display: flex
       flex-direction: row
@@ -73,8 +73,6 @@
       width: 100%
       justify-content: flex-start
       list-style: none
-    &-item
-
     &-burger
       margin-left: 24px
       display: none
@@ -86,7 +84,7 @@
       display: grid
       grid-template-columns: 1fr 2fr
       grid-gap: 24px
-      scroll-margin-top: 100px
+
       &_wrapper
         padding: 2rem 4rem
       img,
@@ -99,6 +97,8 @@
       flex-direction: column
       justify-content: flex-start
       align-items: flex-start
+  &__section
+    scroll-margin-top: 100px
 .case__head-row
   display: grid
   grid-template-columns: 1fr 2fr
@@ -119,9 +119,10 @@
   font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 768px) / (1920 - 768))), 24px)
   line-height: 1.4
   color: #3F3F3F
-  margin: 24px 0
   &.italic
     font-style: italic
+p.case__text
+  margin: 24px 0
 a.case__text
   color: $blue
   margin: 24px 0
@@ -159,6 +160,11 @@ figure
   margin: 24px 0
 
 @media (max-width: 992px)
+  .case__wrapper
+    padding-top: 65px
+    z-index: 39
+  .case__nav-wrapper
+    top: 0
   .case
     max-width: 100%
   .case__nav-list
@@ -200,7 +206,8 @@ figure
     grid-template-columns: 1fr
     justify-content: start
     align-items: start
+    grid-gap: 0
   .case__maintitle
     margin-bottom: 1rem
   .case__content-row_wrapper
-    padding: 24px 18px
+    padding: 16px 18px

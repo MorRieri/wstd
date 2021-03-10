@@ -12,3 +12,18 @@
 //=./Contacts/index.js
 //=./CardType/index.js
 
+let logo = document.getElementById('image_0'),
+
+  test = lottie.loadAnimation({
+    container: logo, // Required
+    path: '../assets/js/Test2.json', // Required
+    renderer: 'svg', // Required
+    loop: false, // Optional
+    autoplay: true, // Optional
+    name: "logo", // Name for future reference. Optional.
+
+  });
+
+$('.card-product__button-review').click(function(e) {
+  e.stopPropagation()
+});

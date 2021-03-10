@@ -18,14 +18,23 @@
   &__description
     max-width: 420px
     width: 100%
-
-  &__image
+  &__image-wrapper
     width: 120px
     height: 105px
+    position: relative
+    overflow: hidden
+    z-index: 1
     border-radius: 4px
-    object-fit: cover
-    object-position: center
     margin-left: 32px
+  &__image
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: 100%
+    width: 100%
+    transition: all 0.2s ease-in
+
 
   &__text
     //@include font(18, 28)
@@ -53,7 +62,7 @@
   display: flex
   position: absolute
   z-index: 20
-  top: 110%
+  top: 100%
   left: 0
   width: 514px
   background-color: $text_black
@@ -144,3 +153,7 @@
   .card-product__button-case
     width: 45%
 
+  .card-product__image-wrapper
+    display: none
+  .card-product__button-review-content
+    width: 320px

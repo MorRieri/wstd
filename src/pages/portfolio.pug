@@ -7,48 +7,47 @@ block variables
 
 block content
   section.section.section--service-page
-    .container
-      .services-page
-        .wrapper.wrapper--padding
-          .services-page__title Портфолио
-        .filters.services-page__filters.js-filters
-          .filters__nav.wrapper.wrapper--padding
-            button.button.button--outline.filters__tab.js-filters-tab(data-filter="all")
-              span.button__text Все
-            button.button.button--outline.button--outline--medicine.filters__tab.js-filters-tab(data-filter="med")
-              span.button__text Медицина
-            button.button.button--outline.button--outline--rest.filters__tab.js-filters-tab(data-filter="rest")
-              span.button__text Рестораны
-            button.button.button--outline.button--outline--hotel.filters__tab.js-filters-tab(data-filter="hotel")
-              span.button__text Отели
-            button.button.button--outline.filters__tab.js-filters-tab(data-filter="support")
-              span.button__text Поддержка
-            button.button.button--outline.filters__tab.js-filters-tab(data-filter="seo")
-              span.button__text SEO
-            button.button.button--outline.filters__tab.js-filters-tab(data-filter="promotion")
-              span.button__text Продвижение
-          .filters__container.wrapper
-            ul.products-list
-              li.products-list__item.js-filters-element(data-filter="med")
-                +CardProduct
-              li.products-list__item.js-filters-element(data-filter="rest")
-                +CardProduct
-              li.products-list__item.js-filters-element(data-filter="hotel")
-                +CardProduct
-              div.products-list__sublist.js-collapse-sublist.js-filters-element(data-filter="support,seo,promotion")
-                .products-list__item.products-list__item--main
-                  +CardProductMain
-                  button.products-list__button-collapse.button.button--collapse.js-collapse-button
-                    span.button__text Свернуть
-                    <svg class="icon" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8574 13.6713C18.8574 13.4409 18.771 13.2105 18.5992 13.035L11.5516 5.83503C11.2072 5.48313 10.6504 5.48313 10.306 5.83503L3.25834 13.035C2.91389 13.3869 2.91389 13.9557 3.25834 14.3076C3.60279 14.6595 4.15955 14.6595 4.50401 14.3076L10.9288 7.74392L17.3536 14.3076C17.698 14.6595 18.2548 14.6595 18.5992 14.3076C18.771 14.1321 18.8574 13.9017 18.8574 13.6713Z" fill="currentColor" fill-opacity="0.8"/>
-                    </svg>
-                ul.products-list
-                  li.products-list__item.js-filters-element(data-filter="support")
-                    +CardProductSublist
-                  li.products-list__item.js-filters-element(data-filter="seo")
-                    +CardProductSublist
-                  li.products-list__item.js-filters-element(data-filter="promotion")
-                    +CardProductSublist
-              li.products-list__item.js-filters-element(data-filter="med")
-                +CardProduct
+    .services-page
+      .wrapper.wrapper--padding
+        .services-page__title Портфолио
+      .filters.services-page__filters.js-filters
+        .filters__nav.wrapper.wrapper--padding
+          button.button.button--outline.filters__tab.js-filters-tab(data-filter="all")
+            span.button__text Все
+          button.button.button--outline.button--outline--medicine.filters__tab.js-filters-tab(data-filter="med")
+            span.button__text Медицина
+          button.button.button--outline.button--outline--rest.filters__tab.js-filters-tab(data-filter="rest")
+            span.button__text Рестораны
+          button.button.button--outline.button--outline--hotel.filters__tab.js-filters-tab(data-filter="hotel")
+            span.button__text Отели
+          button.button.button--outline.filters__tab.js-filters-tab(data-filter="support")
+            span.button__text Поддержка
+          button.button.button--outline.filters__tab.js-filters-tab(data-filter="seo")
+            span.button__text SEO
+          button.button.button--outline.filters__tab.js-filters-tab(data-filter="promotion")
+            span.button__text Продвижение
+        .filters__container
+          ul.products-list
+            li.products-list__item.js-filters-element(data-filter="med")
+              +CardProduct
+            li.products-list__item.js-filters-element(data-filter="rest")
+              +CardProduct
+            li.products-list__item.js-filters-element(data-filter="hotel")
+              +CardProduct
+            div.products-list__sublist.js-collapse-sublist.js-filters-element(data-filter="support,seo,promotion")
+              .products-list__item.products-list__item--main
+                +CardProductMain
+                button.products-list__button-collapse.button.button--collapse.js-collapse-button
+                  span.button__text Свернуть
+                  <svg class="icon" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8574 13.6713C18.8574 13.4409 18.771 13.2105 18.5992 13.035L11.5516 5.83503C11.2072 5.48313 10.6504 5.48313 10.306 5.83503L3.25834 13.035C2.91389 13.3869 2.91389 13.9557 3.25834 14.3076C3.60279 14.6595 4.15955 14.6595 4.50401 14.3076L10.9288 7.74392L17.3536 14.3076C17.698 14.6595 18.2548 14.6595 18.5992 14.3076C18.771 14.1321 18.8574 13.9017 18.8574 13.6713Z" fill="currentColor" fill-opacity="0.8"/>
+                  </svg>
+              ul.products-list
+                li.products-list__item.js-filters-element(data-filter="support")
+                  +CardProductSublist
+                li.products-list__item.js-filters-element(data-filter="seo")
+                  +CardProductSublist
+                li.products-list__item.js-filters-element(data-filter="promotion")
+                  +CardProductSublist
+            li.products-list__item.js-filters-element(data-filter="med")
+              +CardProduct
