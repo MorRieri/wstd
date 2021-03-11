@@ -1,26 +1,4 @@
-// $('.js-header__menu_mobile').on('click', function(e) {
-//   changeButton();
-//   e.stopPropagation();
-//   headerMenu();
-// });
-//
-// $('.header__row_mobile-menu .nav__link').on('click', function(e) {
-//   changeButton();
-//   headerMenu();
-// });
-//
-// function headerMenu() {
-//   $('html').toggleClass('noscroll');
-//   $('.header').removeClass('active');
-//   $('.js-headerNav').toggleClass('display');
-//   $('.js-headerMobileMenu').toggleClass('display');
-//   $('.js-headerMobileBottom').toggleClass('display');
-//   $('.js-headerTop').toggleClass('header__row_dark');
-// };
-// function changeButton() {
-//   $('#burger').toggleClass('hidden');
-//   $('#burgerClose').toggleClass('hidden');
-// };
+/* Header mobile menu */
 $(".js-openHeader").click(function(){
   headerMenu()
 });
@@ -31,3 +9,37 @@ function headerMenu() {
   $('.header').toggleClass('black');
 };
 
+
+/* Header scroll down */
+if ($(window).width() > 993) {
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $('header').outerHeight();
+
+  $(window).scroll(function (event) {
+    didScroll = true;
+  });
+
+  setInterval(function () {
+    if (didScroll && !$('html').hasClass('noscroll')) {
+      hasScrolled();
+      didScroll = false;
+    }
+  }, 250);
+
+  function hasScrolled() {
+    let st = $(document).scrollTop();
+    // Make scroll more than delta
+    if (Math.abs(lastScrollTop - st) <= delta)
+      return;
+    if (st > lastScrollTop && st > navbarHeight) {
+      // If scrolled down and past the navbar, add class .nav-up.
+      $('.header__section-bottom').addClass('active');
+    } else {
+      // Scroll Up
+      $('.header__section-bottom').removeClass('active');
+    }
+    lastScrollTop = st;
+  };
+};

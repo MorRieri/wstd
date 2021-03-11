@@ -11,7 +11,6 @@
 //=./Form/index.js
 //=./Contacts/index.js
 //=./CardType/index.js
-
 let logo = document.getElementById('image_0'),
 
   test = lottie.loadAnimation({
@@ -19,11 +18,18 @@ let logo = document.getElementById('image_0'),
     path: '../assets/js/Test2.json', // Required
     renderer: 'svg', // Required
     loop: false, // Optional
-    autoplay: true, // Optional
+    autoplay: false, // Optional
     name: "logo", // Name for future reference. Optional.
 
   });
+window.onload = function() {
+  setTimeout( function (){test.play()}, 1100)
+};
 
 $('.card-product__button-review').click(function(e) {
   e.stopPropagation()
+});
+
+$(".card-product__button-review").click(function() {
+    $(this).children(".card-product__button-review-content").toggleClass("active");
 });

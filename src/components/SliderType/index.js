@@ -13,10 +13,11 @@ const sliderType = new Swiper('.js-slider-type', {
   },
 });
 
-// sliderType.on('slideChange', function () {
-//   sliderType.navigation.nextEl.classList.remove('hidden');
-//   sliderType.navigation.prevEl.classList.remove('hidden');
-// });
+sliderType.on('slideChange', function () {
+  sliderType.navigation.nextEl.classList.remove('hidden');
+  sliderType.navigation.prevEl.classList.remove('hidden');
+});
+
 sliderType.on('reachEnd', function () {
   sliderType.navigation.nextEl.classList.add('hidden');
   sliderType.navigation.prevEl.classList.remove('hidden');

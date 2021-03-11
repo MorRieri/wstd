@@ -9,5 +9,17 @@ collapseButton.forEach(item => {
     e.preventDefault();
     item.classList.toggle('rotated');
     parentCollapseButton.classList.toggle('hide-collapse');
+
+    if (item.classList.contains("rotated") == true) {
+      document.getElementById("js-collapse-text").textContent = "Развернуть"
+    }
+    else {
+      document.getElementById("js-collapse-text").textContent = "Свернуть"
+    }
+
   }, false)
-})
+});
+//
+// if (collapseButton.classList.contains("rotated") === true) {
+//   collapseButton.textContent = "Группа проектов"
+// };

@@ -1,7 +1,6 @@
 .header
   position: sticky
-  top: -78px
-  background-color: $pure-white
+  top: 0
   z-index: 40
   @include screen
     .section-row__contact span
@@ -59,8 +58,31 @@
       border-right: none
       border-left: 1px solid $border-grey
 
+.header__section-bottom
+  transition: transform 0.3s ease-in-out
+  transform: translateY(0)
+
+
+.header__section-bottom.active
+  transform: translateY(-300px)
+
+
+@media (min-width: 993px)
+  .header
+    position: sticky
+    top: 0
+    transition: transform 0.3s ease-in-out
+  .header__section-top
+    z-index: 4
+    position: relative
+    background-color: $pure-white
+  .header__section-bottom
+    z-index: 3
+    position: relative
+    background-color: $pure-white
+
 @media (max-width: 992px)
   .header
     position: sticky
     top: 0
-
+    background-color: #ffffff
